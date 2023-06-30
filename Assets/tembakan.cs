@@ -22,7 +22,8 @@ public class tembakan : MonoBehaviour
             sfx_laser.Play();
             tembak();
         }
-        if (Input.GetKeyDown(KeyCode.Joystick1Button2))
+
+        if (Input.GetKeyDown(KeyCode.JoystickButton2))
         {
             sfx_laser.Play();
             tembak();
