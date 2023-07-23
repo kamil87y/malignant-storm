@@ -2,9 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class gerak_background : MonoBehaviour
+public class musuh2 : MonoBehaviour
 {
-    float x = -4f;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,10 +13,7 @@ public class gerak_background : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(x*Time.deltaTime,0,0);
-        if(transform.position.x<= -23.79)
-        {
-            transform.position = new Vector2(23.79f, 0);
-        }
+        
+        transform.Translate(0, 1f * Time.deltaTime, 0);
     }
 }

@@ -25,15 +25,17 @@ public class pelindung : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (gerak.p == 1 && x==true)
+        
+        
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "shield")
         {
            
             Instantiate(shield_prefab, titik_pel.position, titik_pel.rotation, kapal.transform);
 
-            x=false;
         }
-        
     }
 
-  
 }

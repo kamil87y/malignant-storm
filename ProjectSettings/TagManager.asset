@@ -9,6 +9,9 @@ TagManager:
   - shield
   - spaceship
   - penghancur2
+  - laser
+  - laser_musuh
+  - pelindung
   layers:
   - Default
   - TransparentFX

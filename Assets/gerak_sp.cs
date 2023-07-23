@@ -6,10 +6,12 @@ public class gerak_sp : MonoBehaviour
 {
     [SerializeField]float speed = 0.007f;
     public int p;
+    public float hp = 100;
+    darah darah;
     // Start is called before the first frame update
     void Start()
     {
-        
+        darah=FindObjectOfType<darah>();
     }
 
     // Update is called once per frame
@@ -25,6 +27,11 @@ public class gerak_sp : MonoBehaviour
         {
             p = 1;
             
+        }
+        if(other.tag == "laser_musuh")
+        {
+            hp -= 2.5f;
+            darah.Health(hp);
         }
     }
 }
