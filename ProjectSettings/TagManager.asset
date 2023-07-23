@@ -12,6 +12,7 @@ TagManager:
   - laser
   - laser_musuh
   - pelindung
+  - soundtrack
   layers:
   - Default
   - TransparentFX
