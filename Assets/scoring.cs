@@ -8,17 +8,44 @@ public class scoring : MonoBehaviour
     public Text skor;
 
     int jumlah;
+    int hitung;
+    public float waktu;
 
+     void Start()
+    {
+        
+    }
     public void perubahan(int nilai)
     {
         jumlah+=nilai;
-        tampilan();
+        Debug.Log(jumlah);
+        
     }
     public void tampilan()
     {
-        skor.text = jumlah.ToString();
+        
+       
+        while (hitung < jumlah)
+        {
+
+            pe();
+           
+            
+           
+            
+            
+        }
+       
 
     }
-   
+    public void pe()
+    {
+        hitung++;
+        skor.text = hitung.ToString();
+    }
 
+     void Update()
+    {
+        tampilan();
+    }
 }

@@ -21,7 +21,7 @@ public class laser_m : MonoBehaviour
     // Update is called once per frame
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "spaceship" || other.tag == "penghancur2")
+        if (other.tag == "spaceship" || other.tag == "penghancur2"||other.tag== "force_field")
         {
             Destroy(gameObject);
         }

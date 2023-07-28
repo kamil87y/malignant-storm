@@ -8,6 +8,7 @@ public class gerak_sp : MonoBehaviour
     public int p;
     public float hp = 100;
     darah darah;
+    public GameObject dhil;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +21,7 @@ public class gerak_sp : MonoBehaviour
         float gerak = -speed*Input.GetAxis("Vertical")*Time.deltaTime;
         float gerak_samping = speed * Input.GetAxis("Horizontal")*Time.deltaTime;
         transform.Translate(gerak, gerak_samping, 0);
+
     }
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -34,4 +36,6 @@ public class gerak_sp : MonoBehaviour
             darah.Health(hp);
         }
     }
+
+    
 }
