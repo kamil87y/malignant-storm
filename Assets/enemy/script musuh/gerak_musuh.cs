@@ -50,7 +50,7 @@ public class gerak_musuh : MonoBehaviour
         if (other.tag == "laser")
         {
             health -= 1;
-           
+            FindObjectOfType<gerak_sp>().Corruption();
             //Debug.Log(health);
             if (health <= 0)
             {
