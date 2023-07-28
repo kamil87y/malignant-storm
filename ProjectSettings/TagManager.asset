@@ -3,20 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - penghancur
-  - enemy
-  - shield
-  - spaceship
-  - penghancur2
-  - laser
-  - laser_musuh
-  - pelindung
-<<<<<<< Updated upstream
-  - soundtrack
-=======
-  - force_field
->>>>>>> Stashed changes
+  tags: []
   layers:
   - Default
   - TransparentFX
