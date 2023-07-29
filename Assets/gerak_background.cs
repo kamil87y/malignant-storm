@@ -15,9 +15,9 @@ public class gerak_background : MonoBehaviour
     void Update()
     {
         transform.Translate(x*Time.deltaTime,0,0);
-        if(transform.position.x<= -23.79)
+        if(transform.position.x<= -22.59)
         {
-            transform.position = new Vector2(23.79f, 0);
+            transform.position = new Vector2(22.59f, 0);
         }
     }
 }
