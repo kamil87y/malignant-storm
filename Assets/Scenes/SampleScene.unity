@@ -1958,9 +1958,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87f3eaa5a04f32647932fc4bfee0d977, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objek: {fileID: 6394489447182970058, guid: 4d3ab1682f6e07847ad774cf64aa783c, type: 3}
+  musuh1: {fileID: 0}
   musuh2: {fileID: 5722684160685897989, guid: aec00c92143872a46b30507f417b64a3, type: 3}
   musuh3: {fileID: 7454247139205483673, guid: df9ee2f9f7371e242ab9cf1f817f9c52, type: 3}
+  musuh4: {fileID: 0}
+  boss: {fileID: 0}
   waktu: 0
   interval: 1
   titk: {fileID: 1977197792}
@@ -2023,7 +2025,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: fe584c08e96b8e1499971f18b5627ab4, type: 3}
     m_FontSize: 58
     m_FontStyle: 0
     m_BestFit: 0
