@@ -5,7 +5,7 @@ using UnityEngine;
 public class spawner : MonoBehaviour
 {
     public GameObject objek;
-    public GameObject musuh2;
+    public GameObject musuh2,musuh3;
     public float waktu;
     bool kena= false;
     public float interval = 2;
@@ -24,7 +24,7 @@ public class spawner : MonoBehaviour
     {
         waktu += Time.deltaTime;
         
-        if(waktu <= 360)
+        if(waktu <= 300)
         {
             timer += Time.deltaTime;
             if (timer >= interval)
@@ -38,7 +38,7 @@ public class spawner : MonoBehaviour
 
         }
 
-        if (waktu >= 360)
+        if (waktu >= 300&& waktu<=600)
         {
             timer += Time.deltaTime;
             if (timer >= interval)
@@ -50,7 +50,16 @@ public class spawner : MonoBehaviour
 
         }
 
-
+        if (waktu >= 600)
+        {
+            timer += Time.deltaTime;
+            if (timer >= interval)
+            {
+                transform.position = new Vector2(18.67f, Random.Range(-4.61f, 4.61f));
+                Instantiate(musuh3, titk.position, titk.rotation);
+                timer -= interval;
+            }
+        }
 
 
 

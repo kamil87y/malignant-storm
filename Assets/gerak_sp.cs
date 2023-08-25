@@ -38,8 +38,14 @@ public class gerak_sp : MonoBehaviour
         }
         if(other.tag == "laser_musuh")
         {
-            hp -= 2.5f;
+            hp -= 1;
             darah.Health(hp);
+        }
+        if (other.tag == "darah_supply")
+        {
+            hp = 100;
+            darah.Health(hp);
+
         }
     }
     

@@ -5,8 +5,10 @@ using UnityEngine;
 public class gerak_musuh : MonoBehaviour
 {
     public GameObject proyektil;
+    public GameObject ledak;
     public Transform titik_s;
     public Transform titik_s2;
+    public Transform titik_s3;
     public AudioSource sfx;
     public int health = 100;
     float waktu = 0;
@@ -26,11 +28,12 @@ public class gerak_musuh : MonoBehaviour
     void Update()
     {
         transform.Translate(0, 6f*Time.deltaTime,0);
-        interval = Random.Range(1,4);
+        interval = Random.Range(1f,4);
         waktu+=Time.deltaTime;
 
         if(waktu >= interval)
         {
+            Debug.Log(interval);
             tembakan();
             waktu=0;
         }
@@ -54,8 +57,9 @@ public class gerak_musuh : MonoBehaviour
             //Debug.Log(health);
             if (health <= 0)
             {
+                Instantiate(ledak,titik_s3.position,titik_s3.rotation);
                 Destroy(gameObject);
-               
+               Destroy(ledak);
                
             } 
            
@@ -78,7 +82,7 @@ public class gerak_musuh : MonoBehaviour
     {
         if (transform.position.x>-15)
         {
-
+            
             Scoring.perubahan(sekor);
             
         }

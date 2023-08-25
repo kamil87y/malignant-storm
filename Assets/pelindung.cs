@@ -8,25 +8,41 @@ public class pelindung : MonoBehaviour
     public GameObject kapal;
     public GameObject shield_prefab;
     public gerak_sp gerak;
-    bool x = true;
-    bool y = true;
+    public GameObject teks_shieldbar;
+    shield_mechanic shield_Mechanic;
+    
+   bool kena = false;
 
-    void awake()
-    {
-        
-    }
+    
     
     // Start is called before the first frame update
     void Start()
     {
+        shield_Mechanic=FindObjectOfType<shield_mechanic>();
+        if (kena == false)
+        {
+            teks_shieldbar.SetActive(false);
+
+
+        }
         
     }
 
     // Update is called once per frame
     void Update()
     {
-        
-        
+
+       
+    }
+    public void aktifshield()
+    {
+       
+        if (kena == true)
+        {
+            teks_shieldbar.SetActive(true);
+            Debug.Log("k");
+        }
+       
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -35,7 +51,12 @@ public class pelindung : MonoBehaviour
            
             Instantiate(shield_prefab, titik_pel.position, titik_pel.rotation, kapal.transform);
 
+            kena = true;
         }
+        aktifshield();
+
+         
+      
     }
 
 }
