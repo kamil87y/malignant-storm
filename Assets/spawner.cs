@@ -40,17 +40,33 @@ public class spawner : MonoBehaviour
 
         if (waktu >= 300&& waktu<=600) // fase 2
         {
-            timer += Time.deltaTime;
+            float kemungkinan = Random.Range(0f, 1f);
+            Debug.Log(kemungkinan);
+            if (kemungkinan <= 0.5f)
+            {
+                timer += Time.deltaTime;
             if (timer >= interval)
             {
                 transform.position = new Vector2(18.67f, Random.Range(-4.61f, 4.61f));
                 Instantiate(musuh2, titk.position, titk.rotation);
                 timer -= interval;
             }
+            }
+            else
+            {
+                timer += Time.deltaTime;
+                if (timer >= interval)
+                {
+                    transform.position = new Vector2(18.67f, Random.Range(-4.61f, 4.61f));
+                    Instantiate(musuh1, titk.position, titk.rotation);
+                    timer -= interval;
+                }
+            }
+            
 
         }
 
-        if (waktu >= 00) // fase 3
+        if (waktu >= 700&&waktu<=800) // fase 3
         {
             timer += Time.deltaTime;
             if (timer >= interval)
@@ -61,7 +77,7 @@ public class spawner : MonoBehaviour
             }
         }
         
-        if (waktu >= 600&& waktu<=300) // fase 4
+        if (waktu >= 800) // fase 4
         {
             timer += Time.deltaTime;
             if (timer >= interval)

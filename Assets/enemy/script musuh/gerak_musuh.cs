@@ -9,7 +9,7 @@ public class gerak_musuh : MonoBehaviour
     public Transform titik_s;
     public Transform titik_s2;
     public Transform titik_s3;
-    public AudioSource sfx;
+    public AudioSource sfx,ledaksfx;
     public int health = 100;
     float waktu = 0;
     float interval;
@@ -58,6 +58,7 @@ public class gerak_musuh : MonoBehaviour
             if (health <= 0)
             {
                 Instantiate(ledak,titik_s3.position,titik_s3.rotation);
+                ledaksfx.Play();
                 Destroy(gameObject);
                Destroy(ledak);
                
@@ -82,7 +83,10 @@ public class gerak_musuh : MonoBehaviour
     {
         if (transform.position.x>-15)
         {
-            
+           
+            FindObjectOfType<suara_Ledak>().putar();
+
+           
             Scoring.perubahan(sekor);
             
         }
