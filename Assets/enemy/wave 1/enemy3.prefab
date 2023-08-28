@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5556371052096417149
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 800644462062863968}
+  m_Layer: 0
+  m_Name: titik
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &800644462062863968
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5556371052096417149}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6655068560963966570}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6655068560686509404
 GameObject:
   m_ObjectHideFlags: 0
@@ -67,6 +98,7 @@ Transform:
   - {fileID: 6655068562051775442}
   - {fileID: 6655068561912510508}
   - {fileID: 6655068560686509407}
+  - {fileID: 800644462062863968}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
@@ -278,9 +310,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   proyektil: {fileID: 8788175835357458425, guid: 9f3f43bb14515534da8c069b7a5210ec, type: 3}
+  ledak: {fileID: 3227885557787334556, guid: b31d02cec66a23740a38e3bc2c24e12f, type: 3}
   titik_s: {fileID: 6655068562051775442}
   titik_s2: {fileID: 6655068561912510508}
   titik_s3: {fileID: 6655068560686509407}
+  titik_s4: {fileID: 800644462062863968}
   sfx: {fileID: 6655068560963966569}
   health: 5
 --- !u!1 &6655068561912510509

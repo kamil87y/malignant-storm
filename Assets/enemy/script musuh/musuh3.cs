@@ -44,14 +44,14 @@ public class musuh3 : MonoBehaviour
         {
             health -= 1;
             Debug.Log(health);
-            FindObjectOfType<gerak_sp>().Corruption();
+            FindObjectOfType<gerak_sp>().corrupthit();
             //Debug.Log(health);
             if (health <= 0)
             {
                 Instantiate(ledak, titik3.position, titik3.rotation);
                 Destroy(gameObject);
                 Destroy(ledak);
-
+                FindObjectOfType<gerak_sp>().corruptkill();
             }
 
         }

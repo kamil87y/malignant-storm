@@ -1,0 +1,479 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1680153069185861554
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1680153069185861553}
+  - component: {fileID: 1680153069185861552}
+  - component: {fileID: 1680153069185859663}
+  m_Layer: 0
+  m_Name: pelindung
+  m_TagString: pelindung
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1680153069185861553
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1680153069185861554}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1680153070777078039}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!114 &1680153069185861552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1680153069185861554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a75a5ace79059584e984ea170a88ac0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  titik_pel: {fileID: 1680153069185861553}
+  kapal: {fileID: 1680153070777078041}
+  shield_prefab: {fileID: 6575390069524585556, guid: 9ef52c2626e1f1749b1480f4c13d6dd0, type: 3}
+  gerak: {fileID: 1680153070777078037}
+  teks_shieldbar: {fileID: 0}
+--- !u!58 &1680153069185859663
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1680153069185861554}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
+--- !u!1 &1680153069547398581
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1680153069547398580}
+  m_Layer: 0
+  m_Name: titik tembak
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1680153069547398580
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1680153069547398581}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: -0.412, y: 0.391, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1680153070777078039}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!1 &1680153070777078041
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1680153070777078039}
+  - component: {fileID: 1680153070777078040}
+  - component: {fileID: 1680153070777078037}
+  - component: {fileID: 1680153070777078036}
+  - component: {fileID: 1680153070777078035}
+  - component: {fileID: 8338821949506100554}
+  m_Layer: 0
+  m_Name: shipeship
+  m_TagString: spaceship
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1680153070777078039
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1680153070777078041}
+  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: -5.8173, y: -1.0044, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1680153069547398580}
+  - {fileID: 1680153071040093132}
+  - {fileID: 1680153069185861553}
+  - {fileID: 3560649671350220632}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
+--- !u!212 &1680153070777078040
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1680153070777078041}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 21300000, guid: c1f0583be99f3ee49bd24651709fb923, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 10, y: 10}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!114 &1680153070777078037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1680153070777078041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37947510b65cfa647950ec5ad0c66d05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  titik: {fileID: 3560649671350220632}
+  ledak: {fileID: 3227885557787334556, guid: b31d02cec66a23740a38e3bc2c24e12f, type: 3}
+  speed: 5
+  p: 0
+  hp: 100
+  corruption: 0
+  corrupt: {fileID: 0}
+  dhil: {fileID: 0}
+--- !u!114 &1680153070777078036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1680153070777078041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44f21aee4ff0e4f42ace71c274315757, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  titik_tembak: {fileID: 1680153069547398580}
+  titk_tembak2: {fileID: 1680153071040093132}
+  laser_prefab: {fileID: 8788175835357458425, guid: 6adc2cb4b3e8780409871dd1c1377b12, type: 3}
+  sfx_laser: {fileID: 1680153070777078035}
+  timer: 0
+--- !u!82 &1680153070777078035
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1680153070777078041}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 4310474905e266640852f43bd609a1a4, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 1
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!60 &8338821949506100554
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1680153070777078041}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2, y: 2}
+    newSize: {x: 10, y: 10}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.0640132, y: -0.40802503}
+      - {x: 0.06397596, y: -0.40803012}
+      - {x: 0.06396999, y: -0.4360424}
+      - {x: 0.21991181, y: -0.4360357}
+      - {x: 0.21994066, y: -0.46806723}
+      - {x: 0.3759092, y: -0.46801287}
+      - {x: 0.37590718, y: -0.5000816}
+      - {x: 0.4998801, y: -0.50009644}
+      - {x: 0.49996507, y: -0.5320297}
+      - {x: 0.56413186, y: -0.5320386}
+      - {x: 0.56381, y: -0.24789357}
+      - {x: 0.53193176, y: -0.24808578}
+      - {x: 0.5320723, y: -0.22003375}
+      - {x: 0.50000477, y: -0.2200191}
+      - {x: 0.49982494, y: 0.3440842}
+      - {x: 0.46800673, y: 0.34402835}
+      - {x: 0.4680165, y: 0.37606007}
+      - {x: 0.43602178, y: 0.3760105}
+      - {x: 0.43602088, y: 0.40801838}
+      - {x: 0.4081152, y: 0.40808693}
+      - {x: 0.40810844, y: 0.4359716}
+      - {x: 0.34375015, y: 0.4360224}
+      - {x: 0.34395424, y: -0.1239599}
+      - {x: 0.28014538, y: -0.124044985}
+      - {x: 0.28002685, y: -0.0921217}
+      - {x: 0.22004469, y: -0.09211074}
+      - {x: 0.22000001, y: -0.06397891}
+      - {x: 0.18795912, y: -0.06404091}
+      - {x: 0.18804748, y: 0.31245854}
+      - {x: 0.15581135, y: 0.31201443}
+      - {x: 0.15602544, y: 0.4358277}
+      - {x: 0.123916894, y: 0.43599015}
+      - {x: 0.12401817, y: 0.56419533}
+      - {x: 0.09186475, y: 0.56396276}
+      - {x: 0.091961056, y: 0.59209406}
+      - {x: -0.09211585, y: 0.59193814}
+      - {x: -0.0921219, y: 0.56399375}
+      - {x: -0.12407837, y: 0.5639909}
+      - {x: -0.123961836, y: 0.4360388}
+      - {x: -0.15590337, y: 0.43597776}
+      - {x: -0.15587331, y: 0.31197768}
+      - {x: -0.1881077, y: 0.312}
+      - {x: -0.18806055, y: -0.063794374}
+      - {x: -0.22008629, y: -0.063956015}
+      - {x: -0.22004429, y: -0.09183134}
+      - {x: -0.2800326, y: -0.09199872}
+      - {x: -0.2800606, y: -0.124018796}
+      - {x: -0.3439404, y: -0.12401141}
+      - {x: -0.34399176, y: 0.43598858}
+      - {x: -0.40805995, y: 0.43603072}
+      - {x: -0.40804243, y: 0.40801162}
+      - {x: -0.43605757, y: 0.40796635}
+      - {x: -0.43603206, y: 0.37599972}
+      - {x: -0.46803653, y: 0.37598446}
+      - {x: -0.46800232, y: 0.34396675}
+      - {x: -0.5000535, y: 0.34395024}
+      - {x: -0.50005454, y: -0.21996917}
+      - {x: -0.532073, y: -0.21990505}
+      - {x: -0.53200805, y: -0.2480165}
+      - {x: -0.5640725, y: -0.24798045}
+      - {x: -0.56407326, y: -0.53203386}
+      - {x: -0.50001425, y: -0.53203064}
+      - {x: -0.49998403, y: -0.500115}
+      - {x: -0.37595877, y: -0.50004905}
+      - {x: -0.37591287, y: -0.46807444}
+      - {x: -0.22000247, y: -0.4679953}
+      - {x: -0.22002757, y: -0.43611014}
+      - {x: -0.06397289, y: -0.4359842}
+--- !u!1 &1680153071040093133
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1680153071040093132}
+  m_Layer: 0
+  m_Name: titik tembak (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1680153071040093132
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1680153071040093133}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 0.449, y: 0.391, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1680153070777078039}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!1 &6302136948766410096
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3560649671350220632}
+  m_Layer: 0
+  m_Name: titik
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3560649671350220632
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6302136948766410096}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1680153070777078039}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

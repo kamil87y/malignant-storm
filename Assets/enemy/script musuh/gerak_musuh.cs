@@ -53,7 +53,7 @@ public class gerak_musuh : MonoBehaviour
         if (other.tag == "laser")
         {
             health -= 1;
-            FindObjectOfType<gerak_sp>().Corruption();
+            FindObjectOfType<gerak_sp>().corrupthit();
             //Debug.Log(health);
             if (health <= 0)
             {
@@ -61,7 +61,7 @@ public class gerak_musuh : MonoBehaviour
                 ledaksfx.Play();
                 Destroy(gameObject);
                Destroy(ledak);
-               
+               FindObjectOfType<gerak_sp>().corruptkill();
             } 
            
         }

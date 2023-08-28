@@ -33,5 +33,13 @@ public class shield_mechanic : MonoBehaviour
 
             
         }
+        if(collision.tag== "enemy")
+        {
+           
+            shield_value -= 20;
+            shield_Bar.shild(shield_value);
+
+            
+        }
     }
 }

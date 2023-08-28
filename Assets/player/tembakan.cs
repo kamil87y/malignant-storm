@@ -8,6 +8,8 @@ public class tembakan : MonoBehaviour
     public Transform titk_tembak2;
     public GameObject laser_prefab;
     public AudioSource sfx_laser;
+    public float timer;
+    bool shoot = false;
     
     void Start()
     {
@@ -17,16 +19,38 @@ public class tembakan : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        timer += Time.deltaTime;
+        if (timer >= 0.25f && shoot)
         {
             sfx_laser.Play();
             tembak();
+            timer = 0;
+        }
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            Debug.Log("pressed");
+            shoot = true;
+            sfx_laser.Play();
+            tembak();
+            timer = 0;
         }
 
         if (Input.GetKeyDown(KeyCode.JoystickButton2))
         {
+            shoot = true;
             sfx_laser.Play();
             tembak();
+            timer = 0;
+        }
+
+        if (Input.GetKeyUp(KeyCode.Mouse0)){
+            Debug.Log("released");
+            shoot = false;
+        }
+
+        
+        if (Input.GetKeyUp(KeyCode.JoystickButton2)){
+            shoot = false;
         }
     }
 

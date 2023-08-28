@@ -78,7 +78,7 @@ public class boss2behaviour : MonoBehaviour
         if (other.tag == "laser" && !charge)
         {
             health -= 1;
-            FindObjectOfType<gerak_sp>().Corruption();
+            FindObjectOfType<gerak_sp>().corrupthit();
             //Debug.Log(health);
             if (health <= 0)
             {

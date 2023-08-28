@@ -5,7 +5,8 @@ using UnityEngine;
 public class enemy4k : MonoBehaviour
 {
     public GameObject proyektil;
-    public Transform titik_s, titik_s2;
+    public GameObject ledak;
+    public Transform titik_s, titik_s2, titik_s3;
     public AudioSource sfx;
     public int health = 100;
     float waktu = 0;
@@ -49,15 +50,22 @@ public class enemy4k : MonoBehaviour
         if (other.tag == "laser")
         {
             health -= 1;
-            FindObjectOfType<gerak_sp>().Corruption();
+            FindObjectOfType<gerak_sp>().corrupthit();
             //Debug.Log(health);
             if (health <= 0)
             {
+                Instantiate(ledak,titik_s3.position,titik_s3.rotation);
                 Destroy(gameObject);
-               
-               
+                FindObjectOfType<gerak_sp>().corruptkill();
             } 
            
+        }
+
+        if (other.tag == "spaceship" || other.tag == "force_field")
+        {
+            Instantiate(ledak,titik_s3.position,titik_s3.rotation);
+            Destroy(gameObject);
+            FindObjectOfType<gerak_sp>().corruptkill();
         }
     }
 

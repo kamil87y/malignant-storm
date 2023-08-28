@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class gerak_sp : MonoBehaviour
+public class gerak_spbackup : MonoBehaviour
 {
     public Transform titik;
     public GameObject ledak;

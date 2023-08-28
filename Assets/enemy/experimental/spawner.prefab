@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2720758188333020906
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2720758188333020885}
+  - component: {fileID: 2720758188333020884}
+  m_Layer: 0
+  m_Name: spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2720758188333020885
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2720758188333020906}
+  m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 18.67, y: 0, z: 0.05836297}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!114 &2720758188333020884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2720758188333020906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea2ea172eba71c1419716e6fa866aa99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  musuh1: {fileID: 8146587690397450085, guid: c2597cf870f580745bd0b2ebd552a6b7, type: 3}
+  musuh2: {fileID: 6634008599155514828, guid: 7c8774f786292db4195572a304980f84, type: 3}
+  musuh3: {fileID: 6655068560963966572, guid: ec84fea452c00664bba93c0cb0bdd4c2, type: 3}
+  musuh4: {fileID: 6063789006256750549, guid: ac40bacdb8b09d146aef946cc789dc53, type: 3}
+  boss: {fileID: 6771041413333898821, guid: 3eac90ce000665c4dbadc1c407c911d9, type: 3}
+  boss1limit: {fileID: 2883152505718352508, guid: 83d3782a0096dae45b86c591439d60bd, type: 3}
+  phasestatus: {fileID: 0}
+  waktu: 0
+  interval: 1.5
+  titk: {fileID: 2720758188333020885}
+  limit: {fileID: 0}
+  phase: 1
+  choice: 0
