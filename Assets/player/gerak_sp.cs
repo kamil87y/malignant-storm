@@ -1,33 +1,45 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class gerak_sp : MonoBehaviour
 {
     public Transform titik;
     public GameObject ledak;
+    public GameObject highborder, lowborder;
     [SerializeField]float speed = 0.007f;
     public int p;
     public float hp = 100;
     public float corruption;
-    public Text corrupt;
     darah darah;
     public GameObject dhil;
+
+    private Vector3 highlimit;
+    private Vector3 lowlimit;
+    private Vector2 input;
     // Start is called before the first frame update
     void Start()
     {
         darah=FindObjectOfType<darah>();
+        highlimit = highborder.transform.position;
+        lowlimit = lowborder.transform.position;
     }
 
     // Update is called once per frame
     void Update()
     {
+        input = new Vector2 (Input.GetAxis("Horizontal"),Input.GetAxis("Vertical"));
+        
+        if((transform.position.x <= lowlimit.x && input.x <= 0)||(transform.position.x >= highlimit.x && input.x >= 0)){
+            input.x = 0;
+        }
 
-        corrupt.text = corruption.ToString();
-        float gerak = -speed*Input.GetAxis("Vertical")*Time.deltaTime;
-        float gerak_samping = speed * Input.GetAxis("Horizontal")*Time.deltaTime;
-        transform.Translate(gerak, gerak_samping, 0);
+        if((transform.position.y <= lowlimit.y && input.y <= 0)||(transform.position.y >= highlimit.y && input.y >= 0)){
+            input.y = 0;
+        }
+
+
+        transform.position += new Vector3 (speed * input.x * Time.deltaTime, speed * input.y * Time.deltaTime, 0);
 
         if(corruption==100 && Input.GetButtonDown("Jump"))
         {
@@ -74,7 +86,6 @@ public class gerak_sp : MonoBehaviour
         else if (corruption<100)
         {
             corruption += 0.25f;
-            Debug.Log($"Corruption is at {corruption}%");
         }
     }
 
@@ -85,7 +96,7 @@ public class gerak_sp : MonoBehaviour
         if (corruption<100)
         {
             corruption += 3f;
-            Debug.Log($"Corruption is at {corruption}%");
+
         }
     }
     

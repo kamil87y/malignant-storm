@@ -103,7 +103,7 @@ public class bossbehaviour : MonoBehaviour
             if (health <= 0)
             {
                 FindObjectOfType<boss_soundtrack>().Disable();
-                FindObjectOfType<spawnertest>().reboot();
+                FindObjectOfType<spawner>().reboot();
                 Destroy(gameObject);
             } 
            

@@ -203,11 +203,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   titik: {fileID: 3560649671350220632}
   ledak: {fileID: 3227885557787334556, guid: b31d02cec66a23740a38e3bc2c24e12f, type: 3}
-  speed: 5
+  speed: 7
   p: 0
   hp: 100
   corruption: 0
-  corrupt: {fileID: 0}
   dhil: {fileID: 0}
 --- !u!114 &1680153070777078036
 MonoBehaviour:
