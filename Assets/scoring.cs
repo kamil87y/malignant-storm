@@ -18,7 +18,7 @@ public class scoring : MonoBehaviour
     public void perubahan(int nilai)
     {
         jumlah+=nilai;
-        Debug.Log(jumlah);
+        
         
     }
     public void tampilan()

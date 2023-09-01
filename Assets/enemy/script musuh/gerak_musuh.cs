@@ -65,6 +65,13 @@ public class gerak_musuh : MonoBehaviour
             } 
            
         }
+        if(other.tag == "roket")
+        {
+            Instantiate(ledak, titik_s3.position, titik_s3.rotation);
+            ledaksfx.Play();
+            Destroy(gameObject);
+            Destroy(ledak);
+        }
     }
 
     

@@ -31,7 +31,7 @@ public class pelindung : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        
        
     }
     public void aktifshield()
@@ -39,7 +39,7 @@ public class pelindung : MonoBehaviour
        
         if (kena == true)
         {
-            teks_shieldbar.SetActive(true);
+            teks_shieldbar.SetActive(true);//shield bar
             Debug.Log("k");
         }
        
@@ -50,8 +50,9 @@ public class pelindung : MonoBehaviour
         {
            
             Instantiate(shield_prefab, titik_pel.position, titik_pel.rotation, kapal.transform);
-
+            Debug.Log("p");
             kena = true;
+            
         }
         aktifshield();
 

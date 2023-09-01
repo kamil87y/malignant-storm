@@ -13,6 +13,7 @@ public class gerak_sp : MonoBehaviour
     public float corruption;
     darah darah;
     public GameObject dhil;
+    public Animator animator;
 
     private Vector3 highlimit;
     private Vector3 lowlimit;
@@ -74,6 +75,15 @@ public class gerak_sp : MonoBehaviour
         {
             hp = 100;
             darah.Health(hp);
+
+        }
+        if(other.tag == "enemy")
+        {
+            animator.Play("Base Layer.chara-anim", 0, 0);
+            
+            
+
+            // animator.SetBool("tabrakan",true);
 
         }
     }

@@ -6,7 +6,9 @@ public class tembakan : MonoBehaviour
 {
     public Transform titik_tembak ;
     public Transform titk_tembak2;
+    public Transform titk_tembak3;
     public GameObject laser_prefab;
+    public GameObject roket;
     public AudioSource sfx_laser;
     public float timer;
     bool shoot = false;
@@ -42,7 +44,10 @@ public class tembakan : MonoBehaviour
             tembak();
             timer = 0;
         }
-
+        if (Input.GetKeyDown(KeyCode.Mouse1))
+        {
+            roket_launch();
+        }
         if (Input.GetKeyUp(KeyCode.Mouse0)){
             Debug.Log("released");
             shoot = false;
@@ -59,5 +64,10 @@ public class tembakan : MonoBehaviour
     {
         Instantiate(laser_prefab,titik_tembak.position,titik_tembak.rotation);
         Instantiate(laser_prefab, titk_tembak2.position, titk_tembak2.rotation);
+    }
+
+    void roket_launch()
+    {
+        Instantiate(roket, titk_tembak3.position, titk_tembak3.rotation);
     }
 }

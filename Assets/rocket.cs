@@ -4,17 +4,32 @@ using UnityEngine;
 
 public class rocket : MonoBehaviour
 {
-    public GameObject target;
-    int kecepatan = 100000;
+   
+    public float kecepatan;
+    public Rigidbody2D rb;
+    public AudioSource audio;
     // Start is called before the first frame update
     void Start()
     {
-        
+        rb.velocity = transform.up * kecepatan;
+        audio.Play();
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.position = target.transform.position;
+        
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "penghancur")
+        {
+            Destroy(gameObject);
+        }
+        if(collision.tag == "enemy")
+        {
+            Destroy(gameObject);
+        }
     }
 }

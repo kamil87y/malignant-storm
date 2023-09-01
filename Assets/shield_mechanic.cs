@@ -10,6 +10,7 @@ public class shield_mechanic : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
         shield_Bar=FindObjectOfType<shield_bar>();
     }
 

@@ -134,6 +134,7 @@ Transform:
   - {fileID: 1680153071040093132}
   - {fileID: 1680153069185861553}
   - {fileID: 3560649671350220632}
+  - {fileID: 5690589380200788163}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
@@ -203,11 +204,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   titik: {fileID: 3560649671350220632}
   ledak: {fileID: 3227885557787334556, guid: b31d02cec66a23740a38e3bc2c24e12f, type: 3}
+  highborder: {fileID: 0}
+  lowborder: {fileID: 0}
   speed: 7
   p: 0
   hp: 100
   corruption: 0
   dhil: {fileID: 0}
+  animator: {fileID: 0}
 --- !u!114 &1680153070777078036
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -222,7 +226,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   titik_tembak: {fileID: 1680153069547398580}
   titk_tembak2: {fileID: 1680153071040093132}
+  titk_tembak3: {fileID: 0}
   laser_prefab: {fileID: 8788175835357458425, guid: 6adc2cb4b3e8780409871dd1c1377b12, type: 3}
+  roket: {fileID: 0}
   sfx_laser: {fileID: 1680153070777078035}
   timer: 0
 --- !u!82 &1680153070777078035
@@ -445,6 +451,37 @@ Transform:
   m_Father: {fileID: 1680153070777078039}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!1 &3411184851556503193
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5690589380200788163}
+  m_Layer: 0
+  m_Name: titk tembak 3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5690589380200788163
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3411184851556503193}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.051, y: 0.249, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1680153070777078039}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6302136948766410096
 GameObject:
   m_ObjectHideFlags: 0
