@@ -73,10 +73,10 @@ GameObject:
   - component: {fileID: 6394489447182970053}
   - component: {fileID: 6394489447182970052}
   - component: {fileID: 6394489447182970059}
-  - component: {fileID: 6394489447182970054}
   - component: {fileID: 6394489447182970055}
   - component: {fileID: 4121149752799293052}
   - component: {fileID: 6140012400617353186}
+  - component: {fileID: 7337177862505860811}
   m_Layer: 0
   m_Name: enemy 1
   m_TagString: enemy
@@ -175,32 +175,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &6394489447182970054
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6394489447182970058}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.00000014901161, y: -0.12017989}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2, y: 2}
-    newSize: {x: 2, y: 2}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.6261065, y: 1.4925735}
-  m_EdgeRadius: 0
 --- !u!114 &6394489447182970055
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -413,6 +387,91 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!60 &7337177862505860811
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6394489447182970058}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2, y: 2}
+    newSize: {x: 2, y: 2}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.81215954, y: 0.25059527}
+      - {x: 0.75008166, y: 0.25169843}
+      - {x: 0.74915105, y: 0.1887526}
+      - {x: 0.62526613, y: 0.18770552}
+      - {x: 0.6255668, y: 0.12416243}
+      - {x: 0.5004571, y: 0.1256437}
+      - {x: 0.49819273, y: 0.061628178}
+      - {x: 0.24871698, y: 0.062435523}
+      - {x: 0.25011727, y: 0.12511918}
+      - {x: 0.18769407, y: 0.12555122}
+      - {x: 0.18837275, y: 0.31178805}
+      - {x: 0.12544678, y: 0.31341842}
+      - {x: 0.12516102, y: 0.4999067}
+      - {x: 0.062673874, y: 0.5011064}
+      - {x: 0.062309705, y: 0.6259864}
+      - {x: -0.063554674, y: 0.6260309}
+      - {x: -0.06254066, y: 0.49938434}
+      - {x: -0.12394775, y: 0.50093025}
+      - {x: -0.124929085, y: 0.31233436}
+      - {x: -0.18844223, y: 0.31304762}
+      - {x: -0.18783997, y: 0.12631422}
+      - {x: -0.25032753, y: 0.124892004}
+      - {x: -0.24997535, y: 0.06319838}
+      - {x: -0.5005002, y: 0.06239889}
+      - {x: -0.5011258, y: 0.12475576}
+      - {x: -0.6247686, y: 0.12585504}
+      - {x: -0.62495804, y: 0.18815432}
+      - {x: -0.7501381, y: 0.18758228}
+      - {x: -0.7498624, y: 0.2496663}
+      - {x: -0.8129768, y: 0.24950624}
+      - {x: -0.8120932, y: -0.18792558}
+      - {x: -0.7502589, y: -0.18810554}
+      - {x: -0.7500627, y: -0.25003034}
+      - {x: -0.6248439, y: -0.2501366}
+      - {x: -0.62541455, y: -0.3124647}
+      - {x: -0.5002202, y: -0.31297815}
+      - {x: -0.500183, y: -0.3754431}
+      - {x: -0.4377946, y: -0.37537733}
+      - {x: -0.4379074, y: -0.43836218}
+      - {x: -0.31257328, y: -0.43837923}
+      - {x: -0.3125852, y: -0.49962723}
+      - {x: -0.18832383, y: -0.5003483}
+      - {x: -0.18893935, y: -0.7499163}
+      - {x: -0.12476608, y: -0.74995005}
+      - {x: -0.12506881, y: -0.8754239}
+      - {x: 0.125, y: -0.8755556}
+      - {x: 0.12539463, y: -0.7507093}
+      - {x: 0.18727247, y: -0.75161725}
+      - {x: 0.18724915, y: -0.5012387}
+      - {x: 0.31220397, y: -0.50082546}
+      - {x: 0.31247133, y: -0.43850827}
+      - {x: 0.4376741, y: -0.43761858}
+      - {x: 0.4374082, y: -0.3749818}
+      - {x: 0.5000782, y: -0.37525085}
+      - {x: 0.50053906, y: -0.31282967}
+      - {x: 0.6249787, y: -0.3128179}
+      - {x: 0.62509245, y: -0.2517705}
+      - {x: 0.7501821, y: -0.25067225}
+      - {x: 0.7499136, y: -0.18790257}
+      - {x: 0.8145833, y: -0.18794806}
 --- !u!1 &8266158610060508206
 GameObject:
   m_ObjectHideFlags: 0

@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class scoring : MonoBehaviour
 {
     public Text skor;
+    public Text finalskor;
 
     int jumlah;
     int hitung;
@@ -42,6 +43,10 @@ public class scoring : MonoBehaviour
     {
         hitung++;
         skor.text = hitung.ToString();
+    }
+    
+    public void gameover(){
+        finalskor.text = hitung.ToString();
     }
 
      void Update()

@@ -12,7 +12,11 @@ public class musuh3 : MonoBehaviour
     public Transform titik3;
     public int health = 20;
     float waktu = 0;
+    
     int interval;
+    scoring Scoring;
+    int sekor=50;
+    int mati;
     // Start is called before the first frame update
     void Start()
     {
@@ -50,10 +54,15 @@ public class musuh3 : MonoBehaviour
             {
                 Instantiate(ledak, titik3.position, titik3.rotation);
                 Destroy(gameObject);
-                Destroy(ledak);
                 FindObjectOfType<gerak_sp>().corruptkill();
             }
 
+        }
+
+        if (other.tag == "spaceship" || other.tag == "force_field" || other.tag == "roket")
+        {
+            Instantiate(ledak,titik3.position,titik3.rotation);
+            Destroy(gameObject);
         }
     }
 
@@ -61,5 +70,18 @@ public class musuh3 : MonoBehaviour
     {
        Instantiate(proyektil,titik1.position,titik1.rotation);
         Instantiate(proyektil, titik2.position, titik2.rotation);
+    }
+
+    private void OnDestroy()
+    {
+        if (transform.position.x>-15)
+        {
+           
+            FindObjectOfType<suara_Ledak>().putar();
+
+           
+            Scoring.perubahan(sekor);
+            
+        }
     }
 }

@@ -61,7 +61,7 @@ public class enemy4k : MonoBehaviour
            
         }
 
-        if (other.tag == "spaceship" || other.tag == "force_field")
+        if (other.tag == "spaceship" || other.tag == "force_field" || other.tag == "roket")
         {
             Instantiate(ledak,titik_s3.position,titik_s3.rotation);
             Destroy(gameObject);
@@ -80,11 +80,15 @@ public class enemy4k : MonoBehaviour
 
     }
 
+
     private void OnDestroy()
     {
-        if (transform.position.x>-11)
+        if (transform.position.x>-15)
         {
+           
+            FindObjectOfType<suara_Ledak>().putar();
 
+           
             Scoring.perubahan(sekor);
             
         }

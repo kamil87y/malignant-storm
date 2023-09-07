@@ -9,7 +9,7 @@ public class gerak_musuh : MonoBehaviour
     public Transform titik_s;
     public Transform titik_s2;
     public Transform titik_s3;
-    public AudioSource sfx,ledaksfx;
+    public AudioSource sfx;
     public int health = 100;
     float waktu = 0;
     float interval;
@@ -58,19 +58,14 @@ public class gerak_musuh : MonoBehaviour
             if (health <= 0)
             {
                 Instantiate(ledak,titik_s3.position,titik_s3.rotation);
-                ledaksfx.Play();
                 Destroy(gameObject);
-               Destroy(ledak);
-               FindObjectOfType<gerak_sp>().corruptkill();
             } 
            
         }
-        if(other.tag == "roket")
+        if (other.tag == "spaceship" || other.tag == "force_field" || other.tag == "roket")
         {
-            Instantiate(ledak, titik_s3.position, titik_s3.rotation);
-            ledaksfx.Play();
+            Instantiate(ledak,titik_s3.position,titik_s3.rotation);
             Destroy(gameObject);
-            Destroy(ledak);
         }
     }
 

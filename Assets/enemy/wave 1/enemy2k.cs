@@ -68,28 +68,27 @@ public class enemy2k : MonoBehaviour
             Destroy(gameObject);
             FindObjectOfType<gerak_sp>().corruptkill();
         }
-    }
 
-    
-
-
-    void tembakan()
-    {
-        Instantiate(proyektil,titik_s.position,titik_s.rotation);
-        sfx.Play();
+        if (other.tag == "roket")
+        {
+            Instantiate(ledak,titik_s3.position,titik_s3.rotation);
+            Destroy(gameObject);
+        }
 
     }
 
     private void OnDestroy()
     {
-        if (transform.position.x>-11)
+        if (transform.position.x>-15)
         {
+           
+            FindObjectOfType<suara_Ledak>().putar();
 
+           
             Scoring.perubahan(sekor);
             
         }
     }
-
 
 }
 
