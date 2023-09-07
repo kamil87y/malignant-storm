@@ -12,6 +12,7 @@ public class tembakan : MonoBehaviour
     public AudioSource sfx_laser;
     public float timer;
     bool shoot = false;
+    bool roket_null = true;
     
     void Start()
     {
@@ -46,7 +47,8 @@ public class tembakan : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Mouse1))
         {
-            roket_launch();
+            roket_detector();
+            
         }
         if (Input.GetKeyUp(KeyCode.Mouse0)){
             Debug.Log("released");
@@ -66,8 +68,21 @@ public class tembakan : MonoBehaviour
         Instantiate(laser_prefab, titk_tembak2.position, titk_tembak2.rotation);
     }
 
+    void roket_detector()
+    {
+        if (FindObjectOfType<gerak_sp>().jml_roket>0)
+        {
+            roket_launch();
+        }
+        else
+        {
+            
+        }
+    }
     void roket_launch()
     {
+        
         Instantiate(roket, titk_tembak3.position, titk_tembak3.rotation);
+        FindObjectOfType<gerak_sp>().jml_roket--;
     }
 }

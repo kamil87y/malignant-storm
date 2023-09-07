@@ -18,6 +18,7 @@ TagManager:
   - bosslimit2
   - soundtrack
   - roket
+  - roket_pwrup
   layers:
   - Default
   - TransparentFX

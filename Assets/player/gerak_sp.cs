@@ -14,7 +14,7 @@ public class gerak_sp : MonoBehaviour
     darah darah;
     public GameObject dhil;
     public Animator animator;
-
+    public int jml_roket;
     private Vector3 highlimit;
     private Vector3 lowlimit;
     private Vector2 input;
@@ -85,6 +85,10 @@ public class gerak_sp : MonoBehaviour
 
             // animator.SetBool("tabrakan",true);
 
+        }
+        if(other.tag== "roket_pwrup")
+        {
+            jml_roket++;
         }
     }
     

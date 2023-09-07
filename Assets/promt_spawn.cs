@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class promt_spawn : MonoBehaviour
 {
-    public GameObject promt;
-    public GameObject darah;
+    public GameObject shield;
+    public GameObject darah,roket;
     bool kena = false;
     public float interval = 2;
     float timer;
@@ -16,8 +16,9 @@ public class promt_spawn : MonoBehaviour
     void Start()
     {
         transform.position = new Vector2(18.67f, Random.Range(-4.61f, 4.61f));
-        Instantiate(promt, titk.position, titk.rotation);
+        Instantiate(shield, titk.position, titk.rotation);
         Instantiate(darah, titk.position, titk.rotation);
+        Instantiate (roket, titk.position, titk.rotation);
     }
 
     // Update is called once per frame
@@ -29,7 +30,7 @@ public class promt_spawn : MonoBehaviour
         if (timer >= interval)
         {
             transform.position = new Vector2(18.67f, Random.Range(-4.61f, 4.61f));
-            Instantiate(promt, titk.position, titk.rotation);
+            Instantiate(shield, titk.position, titk.rotation);
             timer -= interval;
         }
 
