@@ -48,7 +48,6 @@ public class gerak_sp : MonoBehaviour
         if(corruption==100 && Input.GetButtonDown("Jump"))
         {
             FindObjectOfType<spawner_corruption>().corruptunleash();
-            FindObjectOfType<gameover>().specialunleashed();
             corruption=0;
             if(hp>1){
                 hp=hp/2;

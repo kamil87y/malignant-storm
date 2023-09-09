@@ -32,6 +32,7 @@ public class spawner_corruption : MonoBehaviour
             corrupt = false;
             waktu = 0;
             timer = 0;
+            FindObjectOfType<gameover>().specialunleashed();
         }
     }
 
