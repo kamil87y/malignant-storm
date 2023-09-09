@@ -48,6 +48,7 @@ public class gerak_sp : MonoBehaviour
         if(corruption==100 && Input.GetButtonDown("Jump"))
         {
             FindObjectOfType<spawner_corruption>().corruptunleash();
+            FindObjectOfType<gameover>().specialunleashed();
             corruption=0;
             if(hp>1){
                 hp=hp/2;
@@ -103,6 +104,7 @@ public class gerak_sp : MonoBehaviour
     {
         if (corruption>99.75f){
             corruption=100f;
+            FindObjectOfType<gameover>().specialready();
         }
         else if (corruption<100)
         {
@@ -114,19 +116,13 @@ public class gerak_sp : MonoBehaviour
     public void corruptkill(){
         if (corruption>97f){
             corruption=100f;
+            FindObjectOfType<gameover>().specialready();
         }
         if (corruption<100)
         {
             corruption += 3f;
 
         }
-        corrup.corruptcall(corruption);
-    }
-
-    public void corruptpurge(){
-        corruption += 10f;
-        hp -= 5;
-        darah.Health(hp);
         corrup.corruptcall(corruption);
     }
 

@@ -54,14 +54,7 @@ public class enemy2k : MonoBehaviour
            
         }
 
-        if (other.tag == "spaceship" || other.tag == "force_field")
-        {
-            Instantiate(ledak,titik_s3.position,titik_s3.rotation);
-            Destroy(gameObject);
-            FindObjectOfType<gerak_sp>().corruptpurge();
-        }
-
-        if (other.tag == "roket")
+        if (other.tag == "spaceship" || other.tag == "roket" || other.tag == "force_field")
         {
             Instantiate(ledak,titik_s3.position,titik_s3.rotation);
             Destroy(gameObject);
