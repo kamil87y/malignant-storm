@@ -12,9 +12,8 @@ public class enemy2k : MonoBehaviour
     float waktu = 0;
     float interval;
     scoring Scoring;
-    int sekor = 100;
+    int sekor = 120;
     int mati;
-    int fire=1;
    
   
     // Start is called before the first frame update
@@ -29,13 +28,6 @@ public class enemy2k : MonoBehaviour
         transform.Translate(0, 3.5f*Time.deltaTime,0);
         interval = 2f;
         waktu+=Time.deltaTime;
-
-        if(waktu >= interval && fire==1)
-        {
-            tembakan();
-            waktu=0;
-            fire=2;
-        }
          
 
     }
@@ -66,13 +58,14 @@ public class enemy2k : MonoBehaviour
         {
             Instantiate(ledak,titik_s3.position,titik_s3.rotation);
             Destroy(gameObject);
-            FindObjectOfType<gerak_sp>().corruptkill();
+            FindObjectOfType<gerak_sp>().corruptpurge();
         }
 
         if (other.tag == "roket")
         {
             Instantiate(ledak,titik_s3.position,titik_s3.rotation);
             Destroy(gameObject);
+            FindObjectOfType<gerak_sp>().corruptkill();
         }
 
     }

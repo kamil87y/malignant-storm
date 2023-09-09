@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 2904906116475524108}
   - component: {fileID: 989172489841115530}
   - component: {fileID: 6056839486359640981}
-  - component: {fileID: 4799144303583995993}
   - component: {fileID: -5940053386096452316}
+  - component: {fileID: 2983936259833484806}
   m_Layer: 0
   m_Name: orange laser
   m_TagString: laser_musuh
@@ -108,32 +108,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &4799144303583995993
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8788175835357458425}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.005234003, y: 0.0051625036}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.8, y: 0.8}
-    newSize: {x: 0.32, y: 0.32}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.1902194, y: 0.02999591}
-  m_EdgeRadius: 0
 --- !u!114 &-5940053386096452316
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -148,3 +122,40 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   rb1: {fileID: 6056839486359640981}
+--- !u!60 &2983936259833484806
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8788175835357458425}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.8, y: 0.8}
+    newSize: {x: 0.32, y: 0.32}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.24959898, y: 0.00030310452}
+      - {x: -0.22451639, y: -0.00030082464}
+      - {x: -0.22514611, y: -0.024835914}
+      - {x: 0.20005523, y: -0.025741309}
+      - {x: 0.19930497, y: -0.000004220754}
+      - {x: 0.22448102, y: -0.00048926845}
+      - {x: 0.2243144, y: 0.024459355}
+      - {x: 0.20057917, y: 0.024750307}
+      - {x: 0.20042467, y: 0.0500762}
+      - {x: -0.22477236, y: 0.049064875}
+      - {x: -0.22485876, y: 0.024490193}
+      - {x: -0.24983484, y: 0.025}

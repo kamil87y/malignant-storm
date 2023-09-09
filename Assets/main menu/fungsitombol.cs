@@ -11,4 +11,7 @@ public class fungsitombol : MonoBehaviour
     public void Begin(){
         SceneManager.LoadScene(1);
     }
+    public void Return(){
+        SceneManager.LoadScene(0);
+    }
 }

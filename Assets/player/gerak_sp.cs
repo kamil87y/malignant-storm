@@ -9,9 +9,10 @@ public class gerak_sp : MonoBehaviour
     public GameObject highborder, lowborder;
     [SerializeField]float speed = 0.007f;
     public int p;
-    public float hp = 100;
+    public int hp = 100;
     public float corruption;
     darah darah;
+    corruption corrup;
     public GameObject dhil;
     public Animator animator;
     public int jml_roket;
@@ -22,8 +23,10 @@ public class gerak_sp : MonoBehaviour
     void Start()
     {
         darah=FindObjectOfType<darah>();
+        corrup=FindObjectOfType<corruption>();
         highlimit = highborder.transform.position;
         lowlimit = lowborder.transform.position;
+        corrup.corruptcall(corruption);
     }
 
     // Update is called once per frame
@@ -44,12 +47,16 @@ public class gerak_sp : MonoBehaviour
 
         if(corruption==100 && Input.GetButtonDown("Jump"))
         {
-            Debug.Log("Special Attack Unleashed!");
+            FindObjectOfType<spawner_corruption>().corruptunleash();
             corruption=0;
+            if(hp>1){
+                hp=hp/2;
+            }
+            darah.Health(hp);
+            corrup.corruptcall(corruption);
         }
         if (hp<=0){
-            Instantiate(ledak,titik.position,titik.rotation);
-            Destroy(gameObject);
+            killingblow();
         }
     }
     void OnTriggerEnter2D(Collider2D other)
@@ -66,7 +73,7 @@ public class gerak_sp : MonoBehaviour
             darah.Health(hp);
         }
 
-        if(other.tag == "enemy")
+        if(other.tag == "enemy" || other.tag == "roket_musuh")
         {
             hp -= 5;
             darah.Health(hp);
@@ -88,7 +95,7 @@ public class gerak_sp : MonoBehaviour
         }
         if(other.tag== "roket_pwrup")
         {
-            jml_roket++;
+            jml_roket+=3;
         }
     }
     
@@ -101,6 +108,7 @@ public class gerak_sp : MonoBehaviour
         {
             corruption += 0.25f;
         }
+        corrup.corruptcall(corruption);
     }
 
     public void corruptkill(){
@@ -112,6 +120,22 @@ public class gerak_sp : MonoBehaviour
             corruption += 3f;
 
         }
+        corrup.corruptcall(corruption);
+    }
+
+    public void corruptpurge(){
+        corruption += 10f;
+        hp -= 5;
+        darah.Health(hp);
+        corrup.corruptcall(corruption);
+    }
+
+    public void killingblow(){
+        FindObjectOfType<scoring>().gameover();
+        FindObjectOfType<gameover>().activate();
+        Instantiate(ledak,titik.position,titik.rotation);
+        Destroy(gameObject);
+        FindObjectOfType<suara_Ledak>().putar();
     }
     
 }

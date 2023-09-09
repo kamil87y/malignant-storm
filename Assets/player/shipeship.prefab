@@ -90,7 +90,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1680153069547398581}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -0.412, y: 0.391, z: 0}
+  m_LocalPosition: {x: -0.425, y: 0.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -111,6 +111,7 @@ GameObject:
   - component: {fileID: 1680153070777078036}
   - component: {fileID: 1680153070777078035}
   - component: {fileID: 8338821949506100554}
+  - component: {fileID: 1443969554}
   m_Layer: 0
   m_Name: shipeship
   m_TagString: spaceship
@@ -206,12 +207,13 @@ MonoBehaviour:
   ledak: {fileID: 3227885557787334556, guid: b31d02cec66a23740a38e3bc2c24e12f, type: 3}
   highborder: {fileID: 0}
   lowborder: {fileID: 0}
-  speed: 7
+  speed: 6
   p: 0
   hp: 100
   corruption: 0
   dhil: {fileID: 0}
-  animator: {fileID: 0}
+  animator: {fileID: 1443969554}
+  jml_roket: 0
 --- !u!114 &1680153070777078036
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -226,9 +228,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   titik_tembak: {fileID: 1680153069547398580}
   titk_tembak2: {fileID: 1680153071040093132}
-  titk_tembak3: {fileID: 0}
+  titk_tembak3: {fileID: 5690589380200788163}
   laser_prefab: {fileID: 8788175835357458425, guid: 6adc2cb4b3e8780409871dd1c1377b12, type: 3}
-  roket: {fileID: 0}
+  roket: {fileID: 1561124822046533908, guid: 7ee9d61409cbaf94d8c954896c6fe49f, type: 3}
   sfx_laser: {fileID: 1680153070777078035}
   timer: 0
 --- !u!82 &1680153070777078035
@@ -243,7 +245,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 4310474905e266640852f43bd609a1a4, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.8
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -420,6 +422,27 @@ PolygonCollider2D:
       - {x: -0.22000247, y: -0.4679953}
       - {x: -0.22002757, y: -0.43611014}
       - {x: -0.06397289, y: -0.4359842}
+--- !u!95 &1443969554
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1680153070777078041}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7371996a3ba16c4439b20fea2f529ba7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1680153071040093133
 GameObject:
   m_ObjectHideFlags: 0
@@ -444,7 +467,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1680153071040093133}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0.449, y: 0.391, z: 0}
+  m_LocalPosition: {x: 0.425, y: 0.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

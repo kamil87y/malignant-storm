@@ -7,18 +7,16 @@ public class promt_spawn : MonoBehaviour
     public GameObject shield;
     public GameObject darah,roket;
     bool kena = false;
-    public float interval = 2;
+    float interval = 40;
     float timer;
     public Transform titk;
+    float kemungkinan;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        transform.position = new Vector2(18.67f, Random.Range(-4.61f, 4.61f));
-        Instantiate(shield, titk.position, titk.rotation);
-        Instantiate(darah, titk.position, titk.rotation);
-        Instantiate (roket, titk.position, titk.rotation);
+        kemungkinan = Random.Range(0f, 1f);
     }
 
     // Update is called once per frame
@@ -27,15 +25,30 @@ public class promt_spawn : MonoBehaviour
 
 
         timer += Time.deltaTime;
-        if (timer >= interval)
-        {
-            transform.position = new Vector2(18.67f, Random.Range(-4.61f, 4.61f));
-            Instantiate(shield, titk.position, titk.rotation);
-            timer -= interval;
+        if (timer >= interval){
+            if (kemungkinan <= 0.5f)
+            {
+                transform.position = new Vector2(9f, Random.Range(-4.61f, 4.61f));
+                Instantiate(shield, titk.position, titk.rotation);
+                timer -= interval;
+                kemungkinan = Random.Range(0f, 1f);
+            }
+            else
+            {
+                transform.position = new Vector2(9f, Random.Range(-4.61f, 4.61f));
+                Instantiate(roket, titk.position, titk.rotation);
+                timer -= interval;
+                kemungkinan = Random.Range(0f, 1f);
+            }
         }
 
 
 
 
+    }
+
+    public void StageClear(){
+        transform.position = new Vector2(9f, Random.Range(-4.61f, 4.61f));
+        Instantiate(darah, titk.position, titk.rotation);
     }
 }

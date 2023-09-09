@@ -19,6 +19,7 @@ TagManager:
   - soundtrack
   - roket
   - roket_pwrup
+  - roket_musuh
   layers:
   - Default
   - TransparentFX

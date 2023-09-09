@@ -34,7 +34,7 @@ public class shield_mechanic : MonoBehaviour
 
             
         }
-        if(collision.tag== "enemy")
+        if(collision.tag== "enemy" || collision.tag == "roket_musuh")
         {
            
             shield_value -= 20;

@@ -14,7 +14,7 @@ public class gerak_musuh : MonoBehaviour
     float waktu = 0;
     float interval;
     scoring Scoring;
-    int sekor = 50;
+    int sekor = 25;
     int mati;
    
   
@@ -22,13 +22,14 @@ public class gerak_musuh : MonoBehaviour
     void Start()
     {
         Scoring = FindObjectOfType<scoring>();
+        interval = Random.Range(2f,4f);
     }
 
     // Update is called once per frame
     void Update()
     {
         transform.Translate(0, 6f*Time.deltaTime,0);
-        interval = Random.Range(1f,4);
+        
         waktu+=Time.deltaTime;
 
         if(waktu >= interval)
@@ -36,6 +37,7 @@ public class gerak_musuh : MonoBehaviour
             Debug.Log(interval);
             tembakan();
             waktu=0;
+            interval = Random.Range(1f,4f);
         }
 
          

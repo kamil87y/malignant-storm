@@ -4,21 +4,24 @@ using UnityEngine;
 
 public class bossbehaviour : MonoBehaviour
 {
-    public GameObject proyektil, proyektil2;
+    public GameObject proyektil, proyektil2, ledak;
     public Transform titik_s, titik_s2, titik_s3, titik_s4, titik_s5, titik_s6;
     public Transform titik_d, titik_d2, titik_d3, titik_d4, titik_d5, titik_d6;
-    public Transform titik_r, titik_r2, titik_r3, titik_r4, titik_r5, titik_r6, titik_r7;
+    public Transform titik_r;
     public AudioSource sfx;
+    darah_boss darah_boss;
     public int health=100;
     int maxhp;
     float waktu1 = 0, waktu2 = 0;
     float intervalgun = 1.25f;
-    float intervalrocket = 5f;
+    float intervalrocket = 0.25f;
     scoring Scoring;
-    int sekor = 500;
+    int sekor = 2000;
     int mati;
     int firemode=1;
-    int rocketspread=1;
+    public bool rocketmode=false;
+    public int rocketcount, rocketcountlimit=8;
+    public float rockettime;
     bool rocketlock = true;
     bool Buff1=false, Buff2=false, Buff3=false;
     float movespeed = 3f;
@@ -29,6 +32,8 @@ public class bossbehaviour : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        FindObjectOfType<gameover>().enable();
+        darah_boss=FindObjectOfType<darah_boss>();
         Scoring = FindObjectOfType<scoring>();
         maxhp = health;
     }
@@ -37,27 +42,45 @@ public class bossbehaviour : MonoBehaviour
     void Update()
     {
         transform.Translate(sidespeed*Time.deltaTime, movespeed*Time.deltaTime,0);
-        waktu1+=Time.deltaTime;
+        
+    
         if (!rocketlock){
-            waktu2+=Time.deltaTime;
+            rockettime+=Time.deltaTime;
+            if (rocketmode){
+                waktu2+=Time.deltaTime;
+            }
         }
 
-        if(waktu1 >= intervalgun && firemode==1)
-        {
-            tembakan_s();
-            waktu1=0;
-            firemode = 2;
-        }
-        if(waktu1 >= intervalgun && firemode==2)
-        {
-            tembakan_d();
-            waktu1=0;
-            firemode = 1;
+        if(!rocketmode){
+            waktu1+=Time.deltaTime;
+            if(waktu1 >= intervalgun && firemode==1 )
+            {
+                tembakan_s();
+                waktu1=0;
+                firemode = 2;
+            }
+            if(waktu1 >= intervalgun && firemode==2)
+            {
+                tembakan_d();
+                waktu1=0;
+                firemode = 1;
+            }
         }
 
-        if(waktu2 >= intervalrocket){
-            tembakan_r();
-            waktu2=0;
+        if(rockettime >= 10){
+            if (rocketmode == false){
+                rocketmode = true;
+            }
+            if(waktu2 >= intervalrocket){
+                tembakan_r();
+                waktu2=0;
+                rocketcount++;
+            }
+            if(rocketcount==rocketcountlimit){
+                rocketmode = false;
+                rocketcount = 0;
+                rockettime = 0;
+            }
         }
 
         if(health<maxhp*0.75 && Buff1 == false)
@@ -72,6 +95,7 @@ public class bossbehaviour : MonoBehaviour
         {
             intervalgun = 1f;
             multiplier = 1.75f;
+            rocketcountlimit = 12;
             waktu1=0;
             Buff2=true;
         }
@@ -80,6 +104,8 @@ public class bossbehaviour : MonoBehaviour
          {
             intervalgun = 0.75f;
             multiplier = 2.5f;
+            rocketcountlimit = 16;
+            intervalrocket = 0.2f;
             waktu1=0;
             waktu2=0;
             Buff3=true;
@@ -99,14 +125,35 @@ public class bossbehaviour : MonoBehaviour
         {
             health -= 1;
             FindObjectOfType<gerak_sp>().corrupthit();
+            darah_boss.Health(health);
             //Debug.Log(health);
             if (health <= 0)
             {
                 FindObjectOfType<boss_soundtrack>().Disable();
-                FindObjectOfType<spawner>().reboot();
                 Destroy(gameObject);
+                Instantiate(ledak,titik_r.position,titik_r.rotation);
+                FindObjectOfType<gerak_sp>().corruptkill();
             } 
            
+        }
+
+        if (other.tag == "roket")
+        {
+            health -= 5;
+            FindObjectOfType<gerak_sp>().corrupthit();
+            darah_boss.Health(health);
+            //Debug.Log(health);
+            if (health <= 0)
+            {
+                FindObjectOfType<boss_soundtrack>().Disable();
+                Destroy(gameObject);
+                Instantiate(ledak,titik_r.position,titik_r.rotation);
+                FindObjectOfType<gerak_sp>().corruptkill();
+            } 
+        }
+
+        if (other.tag == "spaceship"){
+            FindObjectOfType<gerak_sp>().killingblow();
         }
 
         if (other.tag == "bosslimit1"){
@@ -147,28 +194,8 @@ public class bossbehaviour : MonoBehaviour
 
     void tembakan_r()
     {
-        if (rocketspread==1){
-            Instantiate(proyektil2,titik_r.position,titik_r.rotation);
-            Instantiate(proyektil2, titik_r.position, titik_r2.rotation);
-            Instantiate(proyektil2, titik_r.position, titik_r3.rotation); 
-            if (Buff2==true){
-                Instantiate(proyektil2, titik_r.position, titik_r4.rotation);
-                Instantiate(proyektil2, titik_r.position, titik_r5.rotation);
-            }
-            rocketspread=2;
-        }
-        else if (rocketspread==2){
-            Instantiate(proyektil2,titik_r.position,titik_r.rotation);
-            Instantiate(proyektil2, titik_r.position, titik_r4.rotation);
-            Instantiate(proyektil2, titik_r.position, titik_r5.rotation); 
-            if (Buff2==true){
-                Instantiate(proyektil2, titik_r.position, titik_r6.rotation);
-                Instantiate(proyektil2, titik_r.position, titik_r7.rotation);
-            }
-            rocketspread=1;
-        }
-            
-        sfx.Play();
+
+        Instantiate(proyektil2,titik_r.position,titik_r.rotation);
 
     }
 
@@ -177,8 +204,10 @@ public class bossbehaviour : MonoBehaviour
     {
         if (transform.position.x>-15)
         {
-
+            FindObjectOfType<suara_Ledak>().putar();
             Scoring.perubahan(sekor);
+            FindObjectOfType<gameover>().disable();
+            FindObjectOfType<promt_spawn>().StageClear();
             
         }
     }

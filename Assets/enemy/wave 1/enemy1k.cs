@@ -12,7 +12,7 @@ public class enemy1k : MonoBehaviour
     float waktu = 0;
     float interval;
     scoring Scoring;
-    int sekor = 10;
+    int sekor = 5;
     int mati;
     int fire=1;
    
@@ -21,7 +21,7 @@ public class enemy1k : MonoBehaviour
     void Start()
     {
         Scoring = FindObjectOfType<scoring>();
-        interval = Random.Range(2,5);
+        interval = Random.Range(2f,5f);
     }
 
     // Update is called once per frame
@@ -42,7 +42,7 @@ public class enemy1k : MonoBehaviour
             tembakan();
             waktu=0;
             fire=1;
-            interval = Random.Range(2,5);
+            interval = Random.Range(2f,5f);
         }
 
          
@@ -66,7 +66,6 @@ public class enemy1k : MonoBehaviour
             {
                 Instantiate(ledak,titik_s3.position,titik_s3.rotation);
                 Destroy(gameObject);
-               FindObjectOfType<gerak_sp>().corruptkill();
             } 
            
         }
@@ -75,7 +74,6 @@ public class enemy1k : MonoBehaviour
         {
             Instantiate(ledak,titik_s3.position,titik_s3.rotation);
             Destroy(gameObject);
-            FindObjectOfType<gerak_sp>().corruptkill();
         }
     }
 

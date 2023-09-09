@@ -187,7 +187,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 4310474905e266640852f43bd609a1a4, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.8
   m_Pitch: 0.4
   Loop: 0
   Mute: 0
@@ -290,7 +290,7 @@ MonoBehaviour:
   titik_s3: {fileID: 6655068560686509407}
   titik_s4: {fileID: 800644462062863968}
   sfx: {fileID: 6655068560963966569}
-  health: 5
+  health: 8
 --- !u!60 &7727807031280466580
 PolygonCollider2D:
   m_ObjectHideFlags: 0

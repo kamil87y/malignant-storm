@@ -185,7 +185,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 4310474905e266640852f43bd609a1a4, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.8
   m_Pitch: 0.5
   Loop: 0
   Mute: 0
@@ -283,9 +283,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   proyektil: {fileID: 0}
   ledak: {fileID: 3227885557787334556, guid: b31d02cec66a23740a38e3bc2c24e12f, type: 3}
+  titik_s: {fileID: 0}
   titik_s3: {fileID: 763528929265459031}
   sfx: {fileID: 4439478533732196218}
-  health: 14
+  health: 18
 --- !u!60 &4963694396649770334
 PolygonCollider2D:
   m_ObjectHideFlags: 0

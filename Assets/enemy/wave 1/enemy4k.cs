@@ -12,7 +12,7 @@ public class enemy4k : MonoBehaviour
     float waktu = 0;
     float interval;
     scoring Scoring;
-    int sekor = 50;
+    int sekor = 75;
     int mati;
    
   
@@ -20,7 +20,7 @@ public class enemy4k : MonoBehaviour
     void Start()
     {
         Scoring = FindObjectOfType<scoring>();
-        interval = Random.Range(2,4);
+        interval = Random.Range(1f,4f);
     }
 
     // Update is called once per frame
@@ -33,7 +33,7 @@ public class enemy4k : MonoBehaviour
         {
             tembakan();
             waktu=0;
-            interval = Random.Range(2,4);
+            interval = Random.Range(2f,4f);
         }
          
 
