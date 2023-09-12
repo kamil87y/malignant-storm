@@ -3141,7 +3141,7 @@ MonoBehaviour:
   musuh3b: {fileID: 7454247139205483673, guid: df9ee2f9f7371e242ab9cf1f817f9c52, type: 3}
   musuh4: {fileID: 6063789006256750549, guid: ac40bacdb8b09d146aef946cc789dc53, type: 3}
   boss: {fileID: 6771041413333898821, guid: 3eac90ce000665c4dbadc1c407c911d9, type: 3}
-  waktu: 0
+  waktu: 240
   interval: 1
   titk: {fileID: 1977197792}
 --- !u!1 &2023587633

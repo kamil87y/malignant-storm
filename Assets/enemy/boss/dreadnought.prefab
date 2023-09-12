@@ -650,7 +650,7 @@ MonoBehaviour:
   titik_d6: {fileID: 5600782877476405501}
   titik_r: {fileID: 2023855312508110858}
   sfx: {fileID: 4358107653765895411}
-  health: 800
+  health: 600
   rocketmode: 0
   rocketcount: 0
   rocketcountlimit: 8
