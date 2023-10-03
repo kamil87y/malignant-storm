@@ -26,7 +26,7 @@ public class enemy4 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(0, 3.5f*Time.deltaTime,0);
+        transform.Translate(0, 5.5f*Time.deltaTime,0);
         waktu+=Time.deltaTime;
 
         if(waktu >= interval)

@@ -12,7 +12,7 @@ public class enemy2k : MonoBehaviour
     float waktu = 0;
     float interval;
     scoring Scoring;
-    int sekor = 100;
+    int sekor = 120;
     int mati;
    
   
