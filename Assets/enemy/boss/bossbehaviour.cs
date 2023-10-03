@@ -11,6 +11,9 @@ public class bossbehaviour : MonoBehaviour
     public AudioSource sfx;
     darah_boss darah_boss;
     public int health=100;
+    [Header("efek damage")]
+    public GameObject smoke;
+    public Transform smoke_place1,smoke_place2;
     int maxhp;
     float waktu1 = 0, waktu2 = 0;
     float intervalgun = 1.25f;
@@ -19,11 +22,16 @@ public class bossbehaviour : MonoBehaviour
     int sekor = 2000;
     int mati;
     int firemode=1;
+    [Header("roket")]
     public bool rocketmode=false;
     public int rocketcount, rocketcountlimit=8;
     public float rockettime;
     bool rocketlock = true;
     bool Buff1=false, Buff2=false, Buff3=false;
+    [Header("indikator meledak")]
+    bool meledakIND1 = false;
+    bool meledakIND2 = false;
+
     float movespeed = 3f;
     float sidespeed = 0;
     float multiplier = 1f;
@@ -35,14 +43,18 @@ public class bossbehaviour : MonoBehaviour
         FindObjectOfType<gameover>().enable();
         darah_boss=FindObjectOfType<darah_boss>();
         Scoring = FindObjectOfType<scoring>();
-        maxhp = health;
+        maxhp = health; 
+        
+        
+        
+
     }
 
     // Update is called once per frame
     void Update()
     {
         transform.Translate(sidespeed*Time.deltaTime, movespeed*Time.deltaTime,0);
-        
+       
     
         if (!rocketlock){
             rockettime+=Time.deltaTime;
@@ -110,6 +122,7 @@ public class bossbehaviour : MonoBehaviour
             waktu2=0;
             Buff3=true;
          }
+        ledakan_asap();
 
     }
 
@@ -212,6 +225,20 @@ public class bossbehaviour : MonoBehaviour
         }
     }
 
+    void ledakan_asap()
+    {
+        if (FindObjectOfType<smoke_place>().meledak == true&& meledakIND1==false)
+        {
+            Instantiate(smoke, smoke_place1.position, smoke_place1.rotation, smoke_place1.transform);
+            meledakIND1 = true;
+            
+        }
+        if(FindObjectOfType<smoke_place2>().meledak == true &&meledakIND2==false)
+        {
+            Instantiate(smoke, smoke_place2.position, smoke_place2.rotation, smoke_place2.transform);
+            meledakIND2 = true;
+        }
+    }
 
 }
 

@@ -26,7 +26,7 @@ public class promt_spawn : MonoBehaviour
 
         timer += Time.deltaTime;
         if (timer >= interval){
-            if (kemungkinan <= 0.5f)
+            if (kemungkinan <= 0.1f)
             {
                 transform.position = new Vector2(9f, Random.Range(-4.61f, 4.61f));
                 Instantiate(shield, titk.position, titk.rotation);

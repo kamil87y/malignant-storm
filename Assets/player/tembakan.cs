@@ -45,7 +45,7 @@ public class tembakan : MonoBehaviour
             tembak();
             timer = 0;
         }
-        if (Input.GetKeyDown(KeyCode.Mouse1))
+        if (Input.GetKeyDown(KeyCode.Mouse1)||Input.GetKeyDown(KeyCode.JoystickButton1))
         {
             roket_detector();
             

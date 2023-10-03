@@ -16,7 +16,7 @@ public class laser : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.tag == "penghancur" || other.tag == "enemy")
+        if(other.tag == "penghancur" || other.tag == "enemy"|| other.tag=="dreadnought")
         {
 
             Destroy(gameObject);

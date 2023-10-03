@@ -31,6 +31,81 @@ Transform:
   m_Father: {fileID: 6771041413333898826}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2468164447678562460
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5060554499628174028}
+  - component: {fileID: 7663363028625640127}
+  - component: {fileID: 319206225636076036}
+  m_Layer: 0
+  m_Name: smoke_place (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5060554499628174028
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2468164447678562460}
+  m_LocalRotation: {x: 0, y: -1, z: 0, w: 0}
+  m_LocalPosition: {x: -1.72, y: 1.968, z: 0.054}
+  m_LocalScale: {x: 1.2319815, y: 1.2319815, z: 1.2319822}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6771041413333898826}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 180, y: 0, z: 180}
+--- !u!61 &7663363028625640127
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2468164447678562460}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.073094875, y: 0.007326424}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.6302255, y: 1.0146527}
+  m_EdgeRadius: 0
+--- !u!114 &319206225636076036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2468164447678562460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffa73d80341e4d14cbf5d47a97025d6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jml_kena: 0
+  ledakan: {fileID: 3227885557787334556, guid: b31d02cec66a23740a38e3bc2c24e12f, type: 3}
+  asap: {fileID: 5955285151862901661, guid: 11592fd8427b12841bbbbacac5440a9f, type: 3}
+  meledak: 0
 --- !u!1 &3644218862995057496
 GameObject:
   m_ObjectHideFlags: 0
@@ -403,6 +478,81 @@ Transform:
   m_Father: {fileID: 6771041413333898826}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -105}
+--- !u!1 &5809728247137916023
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9137401936093340799}
+  - component: {fileID: 166112615078026822}
+  - component: {fileID: 3516551725495105687}
+  m_Layer: 0
+  m_Name: smoke_place
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9137401936093340799
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5809728247137916023}
+  m_LocalRotation: {x: 0, y: -1, z: 0, w: 0}
+  m_LocalPosition: {x: 1.72, y: 1.968, z: 0.054}
+  m_LocalScale: {x: 1.2319815, y: 1.2319815, z: 1.2319822}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6771041413333898826}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 180, y: 0, z: 180}
+--- !u!61 &166112615078026822
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5809728247137916023}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.030697525, y: 0.007845163}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.7083739, y: 1.0156903}
+  m_EdgeRadius: 0
+--- !u!114 &3516551725495105687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5809728247137916023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0edd1a5722fded74a8f631a561583ec2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jml_kena: 0
+  ledakan: {fileID: 3227885557787334556, guid: b31d02cec66a23740a38e3bc2c24e12f, type: 3}
+  asap: {fileID: 5955285151862901661, guid: 11592fd8427b12841bbbbacac5440a9f, type: 3}
+  meledak: 0
 --- !u!1 &6771041413333898821
 GameObject:
   m_ObjectHideFlags: 0
@@ -419,7 +569,7 @@ GameObject:
   - component: {fileID: 4438826026549797598}
   m_Layer: 0
   m_Name: dreadnought
-  m_TagString: enemy
+  m_TagString: dreadnought
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -449,6 +599,8 @@ Transform:
   - {fileID: 5600782878094599712}
   - {fileID: 5600782877476405501}
   - {fileID: 2023855312508110858}
+  - {fileID: 9137401936093340799}
+  - {fileID: 5060554499628174028}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
@@ -651,6 +803,9 @@ MonoBehaviour:
   titik_r: {fileID: 2023855312508110858}
   sfx: {fileID: 4358107653765895411}
   health: 800
+  smoke: {fileID: 5955285151862901661, guid: 11592fd8427b12841bbbbacac5440a9f, type: 3}
+  smoke_place1: {fileID: 9137401936093340799}
+  smoke_place2: {fileID: 5060554499628174028}
   rocketmode: 0
   rocketcount: 0
   rocketcountlimit: 8

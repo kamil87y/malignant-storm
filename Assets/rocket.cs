@@ -8,6 +8,7 @@ public class rocket : MonoBehaviour
     public float kecepatan;
     public Rigidbody2D rb;
     public AudioSource audio;
+    public GameObject roket_meledak;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +30,11 @@ public class rocket : MonoBehaviour
         }
         if(collision.tag == "enemy")
         {
+            Destroy(gameObject);
+        }
+        if (collision.tag == "dreadnought")
+        {
+            Instantiate(roket_meledak,transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
     }
