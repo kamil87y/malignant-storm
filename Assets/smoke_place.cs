@@ -24,9 +24,8 @@ public class smoke_place2 : MonoBehaviour
         if (collision.tag == "laser")
         {
             jml_kena++;
-            FindObjectOfType<bossbehaviour>().health -= 1;
         }
-        if (jml_kena >= 10&&meledak==false)
+        if (jml_kena >= 50&&meledak==false)
         {
             Instantiate(ledakan, gameObject.transform);
             

@@ -31,7 +31,6 @@ public class tembakan : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
-            Debug.Log("pressed");
             shoot = true;
             sfx_laser.Play();
             tembak();
@@ -51,7 +50,6 @@ public class tembakan : MonoBehaviour
             
         }
         if (Input.GetKeyUp(KeyCode.Mouse0)){
-            Debug.Log("released");
             shoot = false;
         }
 

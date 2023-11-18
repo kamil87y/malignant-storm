@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class bossbehaviour : MonoBehaviour
 {
-    public GameObject proyektil, proyektil2, ledak;
+    public GameObject proyektil, proyektil2, proyektil3, ledak;
     public Transform titik_s, titik_s2, titik_s3, titik_s4, titik_s5, titik_s6;
     public Transform titik_d, titik_d2, titik_d3, titik_d4, titik_d5, titik_d6;
-    public Transform titik_r;
+    public Transform titik_r, titik_r1, titik_r2, titik_r3;
     public AudioSource sfx;
     darah_boss darah_boss;
     public int health=100;
@@ -15,7 +15,7 @@ public class bossbehaviour : MonoBehaviour
     public GameObject smoke;
     public Transform smoke_place1,smoke_place2;
     int maxhp;
-    float waktu1 = 0, waktu2 = 0;
+    float waktu1 = 0, waktu2 = 0, waktu3 = 0;
     float intervalgun = 1.25f;
     float intervalrocket = 0.25f;
     scoring Scoring;
@@ -27,7 +27,9 @@ public class bossbehaviour : MonoBehaviour
     public int rocketcount, rocketcountlimit=8;
     public float rockettime;
     bool rocketlock = true;
+    int rocketcooldown = 10;
     bool Buff1=false, Buff2=false, Buff3=false;
+    bool destruction = false;
     [Header("indikator meledak")]
     bool meledakIND1 = false;
     bool meledakIND2 = false;
@@ -64,7 +66,10 @@ public class bossbehaviour : MonoBehaviour
         }
 
         if(!rocketmode){
-            waktu1+=Time.deltaTime;
+            waktu3+=Time.deltaTime;
+            if(meledakIND1 == false || meledakIND2 == false){
+                waktu1+=Time.deltaTime;
+            }
             if(waktu1 >= intervalgun && firemode==1 )
             {
                 tembakan_s();
@@ -77,9 +82,19 @@ public class bossbehaviour : MonoBehaviour
                 waktu1=0;
                 firemode = 1;
             }
+            if(meledakIND1 == true || meledakIND2 == true){
+                if(waktu3 >= 2f){
+                    tembakan_s2();
+                    waktu3 = 0;
+                }
+            }
+            if(meledakIND1 == true && meledakIND2 == true){
+                destruction = true;
+                rocketcooldown = 6;
+            }
         }
 
-        if(rockettime >= 10){
+        if(rockettime >= rocketcooldown){
             if (rocketmode == false){
                 rocketmode = true;
             }
@@ -183,24 +198,30 @@ public class bossbehaviour : MonoBehaviour
 
     void tembakan_s()
     {
-        Instantiate(proyektil,titik_s.position,titik_s.rotation);
-        Instantiate(proyektil, titik_s.position,titik_s2.rotation);
-        Instantiate(proyektil, titik_s.position,titik_s3.rotation);
-        Instantiate(proyektil,titik_s4.position,titik_s4.rotation);
-        Instantiate(proyektil, titik_s4.position,titik_s5.rotation);
-        Instantiate(proyektil, titik_s4.position,titik_s6.rotation);
-            
+        if (meledakIND1 == false){
+            Instantiate(proyektil,titik_s.position,titik_s.rotation);
+            Instantiate(proyektil, titik_s.position,titik_s2.rotation);
+            Instantiate(proyektil, titik_s.position,titik_s3.rotation);
+        }
+        if (meledakIND2 == false){
+            Instantiate(proyektil,titik_s4.position,titik_s4.rotation);
+            Instantiate(proyektil, titik_s4.position,titik_s5.rotation);
+            Instantiate(proyektil, titik_s4.position,titik_s6.rotation);
+        } 
         sfx.Play();
 
     }
 
     void tembakan_d()
     {
-        Instantiate(proyektil,titik_d.position,titik_d2.rotation);
-        Instantiate(proyektil, titik_d.position, titik_d3.rotation);
-        Instantiate(proyektil, titik_d4.position, titik_d5.rotation);
-        Instantiate(proyektil,titik_d4.position,titik_d6.rotation);
-            
+        if (meledakIND1 == false){
+            Instantiate(proyektil,titik_d.position,titik_d2.rotation);
+            Instantiate(proyektil, titik_d.position, titik_d3.rotation);
+        }
+        if (meledakIND2 == false){
+            Instantiate(proyektil, titik_d4.position, titik_d5.rotation);
+            Instantiate(proyektil,titik_d4.position,titik_d6.rotation);
+        }
         sfx.Play();
 
     }
@@ -210,6 +231,14 @@ public class bossbehaviour : MonoBehaviour
 
         Instantiate(proyektil2,titik_r.position,titik_r.rotation);
 
+    }
+    
+    void tembakan_s2(){
+        Instantiate(proyektil3,titik_r1.position,titik_r1.rotation);
+        if(destruction == true){
+            Instantiate(proyektil3, titik_r1.position,titik_r2.rotation);
+            Instantiate(proyektil3, titik_r1.position,titik_r3.rotation);
+        }
     }
 
 

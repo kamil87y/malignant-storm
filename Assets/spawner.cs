@@ -27,7 +27,7 @@ public class spawner : MonoBehaviour
     {
         waktu += Time.deltaTime;
         
-        if(waktu <= 60) // fase 1
+        if(waktu <= 50) // fase 1
         {
             timer += Time.deltaTime;
             if (timer >= interval)
@@ -41,7 +41,7 @@ public class spawner : MonoBehaviour
             }
         }
 
-        if (waktu >= 60 && waktu <= 120) // fase 2
+        if (waktu >= 50 && waktu <= 100) // fase 2
         {
             if (kemungkinan <= 0.7f)
             {
@@ -71,7 +71,7 @@ public class spawner : MonoBehaviour
 
         }
 
-        if (waktu >= 120 && waktu <= 180) // fase 3
+        if (waktu >= 100 && waktu <= 150) // fase 3
         {
             if (kemungkinan <= 0.5f)
             {
@@ -109,7 +109,7 @@ public class spawner : MonoBehaviour
             }
         }
         
-        if (waktu >= 180 && waktu <= 240) // fase 4
+        if (waktu >= 150 && waktu <= 200) // fase 4
         {
             float kemungkinan = Random.Range(0f, 1f);
             if (kemungkinan <= 0.5f)
@@ -146,7 +146,7 @@ public class spawner : MonoBehaviour
         }
         }
         
-        if (waktu >= 240 && locked==false) // boss
+        if (waktu >= 200 && locked==false) // boss
         {
             FindObjectOfType<stage_soundtrack>().Disable();
             locked = true;

@@ -26,18 +26,10 @@ public class shield_mechanic : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag== "laser_musuh")
+        if(collision.tag== "laser_musuh" || collision.tag== "enemy" || collision.tag == "roket_musuh")
         {
            
             shield_value -= 10;
-            shield_Bar.shild(shield_value);
-
-            
-        }
-        if(collision.tag== "enemy" || collision.tag == "roket_musuh")
-        {
-           
-            shield_value -= 20;
             shield_Bar.shild(shield_value);
 
             

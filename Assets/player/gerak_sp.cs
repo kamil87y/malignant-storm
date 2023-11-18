@@ -50,7 +50,7 @@ public class gerak_sp : MonoBehaviour
             FindObjectOfType<spawner_corruption>().corruptunleash();
             corruption=0;
             if(hp>1){
-                hp=hp/2;
+                hp=hp-(hp/5);
             }
             darah.Health(hp);
             corrup.corruptcall(corruption);
