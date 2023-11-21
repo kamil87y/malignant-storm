@@ -45,7 +45,7 @@ public class gerak_sp : MonoBehaviour
 
         transform.position += new Vector3 (speed * input.x * Time.deltaTime, speed * input.y * Time.deltaTime, 0);
 
-        if(corruption==100 && Input.GetButtonDown("Jump"))
+        if(corruption==100  &&Input.GetButtonDown("Jump") || corruption == 100 && Input.GetKeyDown(KeyCode.JoystickButton5))
         {
             FindObjectOfType<spawner_corruption>().corruptunleash();
             corruption=0;

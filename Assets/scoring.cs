@@ -7,6 +7,7 @@ public class scoring : MonoBehaviour
 {
     public Text skor;
     public Text finalskor;
+    int save;
 
     int jumlah;
     int hitung;
@@ -14,7 +15,7 @@ public class scoring : MonoBehaviour
 
      void Start()
     {
-        
+        save = PlayerPrefs.GetInt("skor");
     }
     public void perubahan(int nilai)
     {
@@ -47,10 +48,13 @@ public class scoring : MonoBehaviour
     
     public void gameover(){
         finalskor.text = hitung.ToString();
+        PlayerPrefs.SetInt("skor", hitung);
+        
     }
 
      void Update()
     {
+        Debug.Log(save);
         tampilan();
     }
 }
