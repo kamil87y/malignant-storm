@@ -26,7 +26,7 @@ public class pause : MonoBehaviour
             else if (pausecheck == true)
             {
                 pause_noaktif();
-                 pausecheck = false;
+                pausecheck = false;
 
             }
 
@@ -37,11 +37,16 @@ public class pause : MonoBehaviour
     {
         pauseGameObject.SetActive(true);
         Time.timeScale = 0f;
+        FindObjectOfType<gerak_sp>().paused_control();
+        FindObjectOfType<tembakan>().paused_shoot();
     }
 
-    void pause_noaktif()
+    public void pause_noaktif()
     {
         pauseGameObject.SetActive(false);
         Time.timeScale = 1f;
+        FindObjectOfType<gerak_sp>().continue_control();
+        FindObjectOfType<tembakan>().continue_shoot();
     }
 }
+

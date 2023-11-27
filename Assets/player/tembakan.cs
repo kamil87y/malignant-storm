@@ -13,6 +13,7 @@ public class tembakan : MonoBehaviour
     public float timer;
     bool shoot = false;
     bool roket_null = true;
+    bool paused = false;
     
     void Start()
     {
@@ -22,40 +23,29 @@ public class tembakan : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        timer += Time.deltaTime;
-        if (timer >= 0.25f && shoot)
-        {
-            sfx_laser.Play();
-            tembak();
-            timer = 0;
-        }
-        if (Input.GetKeyDown(KeyCode.Mouse0))
-        {
-            shoot = true;
-            sfx_laser.Play();
-            tembak();
-            timer = 0;
-        }
-
-        if (Input.GetKeyDown(KeyCode.JoystickButton2))
-        {
-            shoot = true;
-            sfx_laser.Play();
-            tembak();
-            timer = 0;
-        }
-        if (Input.GetKeyDown(KeyCode.Mouse1)||Input.GetKeyDown(KeyCode.JoystickButton1))
-        {
-            roket_detector();
+        if(paused == false){
+            timer += Time.deltaTime;
+            if (timer >= 0.25f && shoot)
+            {
+                sfx_laser.Play();
+                tembak();
+                timer = 0;
+            }
+            if (Input.GetKeyDown(KeyCode.Mouse0)||Input.GetKeyDown(KeyCode.JoystickButton2))
+            {
+                shoot = true;
+                sfx_laser.Play();
+                tembak();
+                timer = 0;
+            }
+            if (Input.GetKeyDown(KeyCode.Mouse1)||Input.GetKeyDown(KeyCode.JoystickButton1))
+            {
+                roket_detector();
             
-        }
-        if (Input.GetKeyUp(KeyCode.Mouse0)){
-            shoot = false;
-        }
-
-        
-        if (Input.GetKeyUp(KeyCode.JoystickButton2)){
-            shoot = false;
+            }
+            if (Input.GetKeyUp(KeyCode.Mouse0)||Input.GetKeyUp(KeyCode.JoystickButton2)){
+                shoot = false;
+            }
         }
     }
 
@@ -83,4 +73,12 @@ public class tembakan : MonoBehaviour
         Instantiate(roket, titk_tembak3.position, titk_tembak3.rotation);
         FindObjectOfType<gerak_sp>().jml_roket--;
     }
+    public void paused_shoot(){
+        paused = true;
+    }
+
+    public void continue_shoot(){
+        paused = false;
+    }
+
 }

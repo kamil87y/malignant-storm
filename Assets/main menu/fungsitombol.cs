@@ -12,6 +12,10 @@ public class fungsitombol : MonoBehaviour
         SceneManager.LoadScene(1);
     }
     public void Return(){
+        FindObjectOfType<pause>().pause_noaktif();
         SceneManager.LoadScene(0);
+    }
+    public void Continue(){
+        FindObjectOfType<pause>().pause_noaktif();
     }
 }

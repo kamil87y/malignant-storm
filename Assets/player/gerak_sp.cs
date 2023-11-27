@@ -19,6 +19,7 @@ public class gerak_sp : MonoBehaviour
     private Vector3 highlimit;
     private Vector3 lowlimit;
     private Vector2 input;
+    bool paused;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,31 +33,33 @@ public class gerak_sp : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        input = new Vector2 (Input.GetAxis("Horizontal"),Input.GetAxis("Vertical"));
+        if(paused == false){
+            input = new Vector2 (Input.GetAxis("Horizontal"),Input.GetAxis("Vertical"));
         
-        if((transform.position.x <= lowlimit.x && input.x <= 0)||(transform.position.x >= highlimit.x && input.x >= 0)){
-            input.x = 0;
-        }
-
-        if((transform.position.y <= lowlimit.y && input.y <= 0)||(transform.position.y >= highlimit.y && input.y >= 0)){
-            input.y = 0;
-        }
-
-
-        transform.position += new Vector3 (speed * input.x * Time.deltaTime, speed * input.y * Time.deltaTime, 0);
-
-        if(corruption==100  &&Input.GetButtonDown("Jump") || corruption == 100 && Input.GetKeyDown(KeyCode.JoystickButton5))
-        {
-            FindObjectOfType<spawner_corruption>().corruptunleash();
-            corruption=0;
-            if(hp>1){
-                hp=hp-(hp/5);
+            if((transform.position.x <= lowlimit.x && input.x <= 0)||(transform.position.x >= highlimit.x && input.x >= 0)){
+                input.x = 0;
             }
-            darah.Health(hp);
-            corrup.corruptcall(corruption);
-        }
-        if (hp<=0){
-            killingblow();
+
+            if((transform.position.y <= lowlimit.y && input.y <= 0)||(transform.position.y >= highlimit.y && input.y >= 0)){
+                input.y = 0;
+            }
+
+
+            transform.position += new Vector3 (speed * input.x * Time.deltaTime, speed * input.y * Time.deltaTime, 0);
+
+            if(corruption==100  &&Input.GetButtonDown("Jump") || corruption == 100 && Input.GetKeyDown(KeyCode.JoystickButton5))
+            {
+                FindObjectOfType<spawner_corruption>().corruptunleash();
+                corruption=0;
+                if(hp>1){
+                    hp=hp-(hp/5);
+                }
+                darah.Health(hp);
+                corrup.corruptcall(corruption);
+            }
+            if (hp<=0){
+                killingblow();
+            }
         }
     }
     void OnTriggerEnter2D(Collider2D other)
@@ -131,6 +134,14 @@ public class gerak_sp : MonoBehaviour
         Instantiate(ledak,titik.position,titik.rotation);
         Destroy(gameObject);
         FindObjectOfType<suara_Ledak>().putar();
+    }
+
+    public void paused_control(){
+        paused = true;
+    }
+
+    public void continue_control(){
+        paused = false;
     }
     
 }
