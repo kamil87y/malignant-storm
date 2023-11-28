@@ -17,6 +17,5 @@ public class darah_boss : MonoBehaviour
     }
     public void disable(){
         gameObject.SetActive(false);
-        slider.value = 650;
     }
 }

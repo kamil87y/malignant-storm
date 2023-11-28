@@ -205,8 +205,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   titik: {fileID: 3560649671350220632}
   ledak: {fileID: 3227885557787334556, guid: b31d02cec66a23740a38e3bc2c24e12f, type: 3}
-  highborder: {fileID: 1299789054208913731, guid: a56134d4b92b2bc4bb69088f84681a2e, type: 3}
-  lowborder: {fileID: 5447771593815650823, guid: 022b66d0a3e41d446afb642c7e216ca4, type: 3}
+  highborder: {fileID: 0}
+  lowborder: {fileID: 0}
   speed: 6
   p: 0
   hp: 100
