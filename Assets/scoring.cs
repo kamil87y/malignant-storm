@@ -8,7 +8,6 @@ public class scoring : MonoBehaviour
     public Text skor;
     public Text finalskor;
     public Text highskor;
-    public GameObject highscore;
     public GameObject newhighscore;
     public int save;
 
@@ -19,6 +18,7 @@ public class scoring : MonoBehaviour
      void Start()
     {
         save = PlayerPrefs.GetInt("skor");
+        //newhighscr.SetActive(false);
     }
     public void perubahan(int nilai)
     {
@@ -54,16 +54,16 @@ public class scoring : MonoBehaviour
         if (save >= jumlah){
             highskor.text = save.ToString();
         }
-        else if (save < jumlah){
-            highscore.SetActive(false);
+        else if (save < jumlah) {             
             newhighscore.SetActive(true);
             PlayerPrefs.SetInt("skor", hitung);
+            highskor.text = hitung.ToString();
         }
     }
 
      void Update()
     {
-        //Debug.Log(save);
+        Debug.Log(save);
         tampilan();
     }
 }

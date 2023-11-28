@@ -7,7 +7,7 @@ public class promt_spawn : MonoBehaviour
     public GameObject shield;
     public GameObject darah,roket;
     bool kena = false;
-    float interval = 40;
+    public float interval = 40;
     float timer;
     public Transform titk;
     float kemungkinan;

@@ -6,12 +6,14 @@ public class shield_mechanic : MonoBehaviour
 {
     public int shield_value = 100;
     shield_bar shield_Bar;
+    pelindung pelindung;
     
     // Start is called before the first frame update
     void Start()
     {
         
         shield_Bar=FindObjectOfType<shield_bar>();
+        pelindung = FindObjectOfType<pelindung>();
     }
 
     // Update is called once per frame
@@ -34,5 +36,14 @@ public class shield_mechanic : MonoBehaviour
 
             
         }
+        else if(collision.tag== "shield")
+        {
+            shield_value = 100;
+        }
+    }
+
+    private void OnDestroy()
+    {
+        pelindung.shiedl_active = false;
     }
 }

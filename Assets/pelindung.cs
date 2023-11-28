@@ -12,6 +12,7 @@ public class pelindung : MonoBehaviour
     shield_mechanic shield_Mechanic;
     
    bool kena = false;
+    public bool shiedl_active=false;
 
     
     
@@ -46,12 +47,13 @@ public class pelindung : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "shield")
+        if (collision.tag == "shield" && shiedl_active==false)
         {
            
             Instantiate(shield_prefab, titik_pel.position, titik_pel.rotation, kapal.transform);
             Debug.Log("p");
             kena = true;
+            shiedl_active = true;
             
         }
         aktifshield();

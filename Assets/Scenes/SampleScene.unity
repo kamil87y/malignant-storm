@@ -1101,6 +1101,7 @@ MonoBehaviour:
   shield: {fileID: 2995968345010621003, guid: d1cb5329a1112434e9c3cfc538e894a0, type: 3}
   darah: {fileID: 8555683517121646549, guid: 2bcd4865c17705d4d9d2a21b564e8b31, type: 3}
   roket: {fileID: 9149447707125191504, guid: 67198010588fa894cb3e0a324da6529a, type: 3}
+  interval: 40
   titk: {fileID: 563365249}
 --- !u!4 &563365249
 Transform:
@@ -2348,7 +2349,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3381,7 +3382,6 @@ MonoBehaviour:
   skor: {fileID: 2063672909}
   finalskor: {fileID: 4012666029206193467}
   highskor: {fileID: 976061461}
-  highscore: {fileID: 1784450786}
   newhighscore: {fileID: 1182567676}
   save: 0
   hitung: 0
