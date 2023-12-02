@@ -11,7 +11,7 @@ public class pelindung : MonoBehaviour
     public GameObject teks_shieldbar;
     shield_mechanic shield_Mechanic;
     
-   bool kena = false;
+    public bool kena = false;
     public bool shiedl_active=false;
 
     
@@ -20,19 +20,17 @@ public class pelindung : MonoBehaviour
     void Start()
     {
         shield_Mechanic=FindObjectOfType<shield_mechanic>();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
         if (kena == false)
         {
             teks_shieldbar.SetActive(false);
 
 
         }
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
        
     }
     public void aktifshield()

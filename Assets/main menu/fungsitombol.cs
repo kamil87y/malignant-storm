@@ -18,4 +18,10 @@ public class fungsitombol : MonoBehaviour
     public void Continue(){
         FindObjectOfType<pause>().pause_noaktif();
     }
+    public void Credits(){
+        FindObjectOfType<menuchange>().tocredits();
+    }
+    public void Main(){
+        FindObjectOfType<menuchange>().tomain();
+    }
 }

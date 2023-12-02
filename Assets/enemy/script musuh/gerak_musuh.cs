@@ -34,7 +34,7 @@ public class gerak_musuh : MonoBehaviour
 
         if(waktu >= interval)
         {
-            Debug.Log(interval);
+            //Debug.Log(interval);
             tembakan();
             waktu=0;
             interval = Random.Range(1f,4f);

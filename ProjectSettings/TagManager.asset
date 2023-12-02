@@ -21,6 +21,7 @@ TagManager:
   - roket_pwrup
   - roket_musuh
   - dreadnought
+  - plasma
   layers:
   - Default
   - TransparentFX

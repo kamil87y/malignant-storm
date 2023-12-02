@@ -45,8 +45,11 @@ public class pause : MonoBehaviour
     {
         pauseGameObject.SetActive(false);
         Time.timeScale = 1f;
-        FindObjectOfType<gerak_sp>().continue_control();
-        FindObjectOfType<tembakan>().continue_shoot();
+        if(FindObjectOfType<gameover>().over == false){
+            FindObjectOfType<gerak_sp>().continue_control();
+            FindObjectOfType<tembakan>().continue_shoot();
+        }
+        
     }
 }
 

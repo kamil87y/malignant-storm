@@ -13,7 +13,7 @@ public class gerak_sp : MonoBehaviour
     public float corruption;
     darah darah;
     corruption corrup;
-    public GameObject dhil;
+    //public GameObject dhil;
     public Animator animator;
     public int jml_roket;
     private Vector3 highlimit;
@@ -73,6 +73,12 @@ public class gerak_sp : MonoBehaviour
         if(other.tag == "laser_musuh")
         {
             hp -= 1;
+            darah.Health(hp);
+        }
+
+        if(other.tag == "plasma")
+        {
+            hp -= 3;
             darah.Health(hp);
         }
 

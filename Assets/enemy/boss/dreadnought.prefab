@@ -821,7 +821,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   proyektil: {fileID: 8788175835357458425, guid: 4ca429598b595574d8ede97f67dfb62e, type: 3}
   proyektil2: {fileID: 1561124822046533908, guid: 96e30d13f31740941bd1663c8d8cdf3c, type: 3}
-  proyektil3: {fileID: 8788175835357458425, guid: 699565188d8e3b946b5d58e77077e76a, type: 3}
+  proyektil3: {fileID: 8720664954785598451, guid: 72fa92aa3097ec2438e7e497650362e3, type: 3}
   ledak: {fileID: 3227885557787334556, guid: b31d02cec66a23740a38e3bc2c24e12f, type: 3}
   titik_s: {fileID: 3061526933256954354}
   titik_s2: {fileID: 5600782877689154921}

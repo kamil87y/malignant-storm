@@ -12,7 +12,7 @@ public class shield_mechanic : MonoBehaviour
     void Start()
     {
         
-        shield_Bar=FindObjectOfType<shield_bar>();
+        shield_Bar = FindObjectOfType<shield_bar>();
         pelindung = FindObjectOfType<pelindung>();
     }
 
@@ -28,7 +28,7 @@ public class shield_mechanic : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag== "laser_musuh" || collision.tag== "enemy" || collision.tag == "roket_musuh")
+        if(collision.tag== "laser_musuh" || collision.tag== "enemy" || collision.tag == "roket_musuh" || collision.tag == "plasma")
         {
            
             shield_value -= 10;
@@ -39,11 +39,13 @@ public class shield_mechanic : MonoBehaviour
         else if(collision.tag== "shield")
         {
             shield_value = 100;
+            shield_Bar.shild(shield_value);
         }
     }
 
     private void OnDestroy()
     {
         pelindung.shiedl_active = false;
+        pelindung.kena = false;
     }
 }

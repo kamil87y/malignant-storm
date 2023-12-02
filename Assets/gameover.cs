@@ -11,6 +11,7 @@ public class gameover : MonoBehaviour
     float waktu;
     bool ready=false;
     bool locked=false;
+    public bool over = false;
 
     void start(){
         gameoverscreen.SetActive(false);
@@ -33,6 +34,7 @@ public class gameover : MonoBehaviour
     {
         playerui.SetActive(false);
         gameoverscreen.SetActive(true);
+        over = true;
     }
     public void enable(){
         bosshp.SetActive(true);

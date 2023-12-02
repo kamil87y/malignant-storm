@@ -18,8 +18,9 @@ public class bossbehaviour : MonoBehaviour
     float waktu1 = 0, waktu2 = 0, waktu3 = 0;
     float intervalgun = 1.25f;
     float intervalrocket = 0.25f;
+    float plasmainterval = 2f;
     scoring Scoring;
-    int sekor = 2000;
+    int sekor = 2500;
     int mati;
     int firemode=1;
     [Header("roket")]
@@ -37,6 +38,7 @@ public class bossbehaviour : MonoBehaviour
     float movespeed = 3f;
     float sidespeed = 0;
     float multiplier = 1f;
+    
    
   
     // Start is called before the first frame update
@@ -83,14 +85,18 @@ public class bossbehaviour : MonoBehaviour
                 firemode = 1;
             }
             if(meledakIND1 == true || meledakIND2 == true){
-                if(waktu3 >= 2f){
+                if(waktu3 >= plasmainterval){
                     tembakan_s2();
                     waktu3 = 0;
                 }
             }
             if(meledakIND1 == true && meledakIND2 == true){
                 destruction = true;
+                plasmainterval = 1.75f;
                 rocketcooldown = 6;
+            }
+            if(Buff3==true && destruction == true){
+                plasmainterval = 1.5f;
             }
         }
 
@@ -239,6 +245,7 @@ public class bossbehaviour : MonoBehaviour
             Instantiate(proyektil3, titik_r1.position,titik_r2.rotation);
             Instantiate(proyektil3, titik_r1.position,titik_r3.rotation);
         }
+        sfx.Play();
     }
 
 

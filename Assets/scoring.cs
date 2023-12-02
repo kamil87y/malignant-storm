@@ -63,7 +63,7 @@ public class scoring : MonoBehaviour
 
      void Update()
     {
-        Debug.Log(save);
+        //Debug.Log(save);
         tampilan();
     }
 }
