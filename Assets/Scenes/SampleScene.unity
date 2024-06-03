@@ -4765,6 +4765,7 @@ MonoBehaviour:
   gameoverscreen: {fileID: 4012666027948730259}
   bosshp: {fileID: 1035792158}
   specialattack: {fileID: 547589324}
+  over: 0
 --- !u!224 &4012666029416253740
 RectTransform:
   m_ObjectHideFlags: 0

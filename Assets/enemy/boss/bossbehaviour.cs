@@ -18,7 +18,7 @@ public class bossbehaviour : MonoBehaviour
     float waktu1 = 0, waktu2 = 0, waktu3 = 0;
     float intervalgun = 1.25f;
     float intervalrocket = 0.25f;
-    float plasmainterval = 2f;
+    float plasmainterval = 1.6f;
     scoring Scoring;
     int sekor = 2500;
     int mati;
@@ -92,11 +92,11 @@ public class bossbehaviour : MonoBehaviour
             }
             if(meledakIND1 == true && meledakIND2 == true){
                 destruction = true;
-                plasmainterval = 1.75f;
+                plasmainterval = 1.25f;
                 rocketcooldown = 6;
             }
             if(Buff3==true && destruction == true){
-                plasmainterval = 1.5f;
+                plasmainterval = 0.9f;
             }
         }
 

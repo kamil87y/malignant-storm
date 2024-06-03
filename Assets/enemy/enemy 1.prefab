@@ -193,7 +193,7 @@ MonoBehaviour:
   titik_s2: {fileID: 2031632558964941345}
   titik_s3: {fileID: 5702884896749029315}
   sfx: {fileID: 4121149752799293052}
-  health: 5
+  health: 4
 --- !u!82 &4121149752799293052
 AudioSource:
   m_ObjectHideFlags: 0

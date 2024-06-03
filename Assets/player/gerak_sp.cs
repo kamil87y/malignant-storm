@@ -104,7 +104,7 @@ public class gerak_sp : MonoBehaviour
         }
         if(other.tag== "roket_pwrup")
         {
-            jml_roket+=3;
+            jml_roket+=15;
         }
     }
     

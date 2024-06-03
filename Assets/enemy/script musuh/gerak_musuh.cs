@@ -14,7 +14,7 @@ public class gerak_musuh : MonoBehaviour
     float waktu = 0;
     float interval;
     scoring Scoring;
-    int sekor = 25;
+    int sekor = 20;
     int mati;
    
   

@@ -25,7 +25,7 @@ public class tembakan : MonoBehaviour
     {
         if(paused == false){
             timer += Time.deltaTime;
-            if (timer >= 0.25f && shoot)
+            if (timer >= 0.2f && shoot)
             {
                 sfx_laser.Play();
                 tembak();
